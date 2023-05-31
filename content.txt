@@ -1,0 +1,79 @@
+---Portfolio---
+
+--> Page d’accueil 
+
+--> Me connaître 
+
+	Actuellement étudiant en informatique à l’IUT2 de Grenoble, je souhaite devenir développeur full stack. 
+
+	J’ai choisi de suivre la formation du BUT informatique, car celle-ci permet de se professionnaliser rapidement et d'acquérir certaines compétences absentes dans d’autres formations telles que la licence. 
+
+	On peut retrouver parmi ces compétences savoir mener à bien un projet, communiquer avec une équipe, mais aussi mettre en pratique un savoir-faire théorique en situation réelle. 
+
+	Plusieurs expériences professionnelles ainsi que personnelles m'ont permis d'évoluer, d'acquérir ainsi que renforcer des compétences utiles lors de la mise en œuvre de projets professionnels, que ce soit en individuel ou en équipe. 
+
+--> Mon travail / mes projets 
+
+	Au cours de mon enseignement, j’ai participé à la réalisation de plusieurs projets (SAE), dont la mise en œuvre est basée sur le fonctionnement d’une entreprise. 
+
+	Le but est de nous apprendre à mettre en pratique toutes les compétences acquises lors de notre formation, et savoir transformer notre savoir-faire en un produit final répondant aux critères et consignes imposés. 
+
+	-> SAE 1.0102 - Premier semestre de l’année scolaire 2022/23 
+
+		Durant ce projet, nous avons appris à implémenter un besoin client concernant diverses approches algorithmiques. 
+
+		Cela consistait à créer un algorithme capable de reconnaître le sujet sur lequel portent certaines dépêches.  
+
+		Pour ce faire, nous avons codé un programme en java capable d’analyser une base de données de 500 dépêches portant chacune d’entre elles sur l’un des 5 sujets possibles (sport, politique, environnement - sciences, culture, économie). Une fois que le programme a appris à reconnaître ces sujets à l’aide de cette base de données, il est capable d’analyser le texte de n’importe quelle autre dépêche qui lui est donnée et de déterminer automatiquement leurs sujets. 
+
+		Cette SAE fut réalisée en binôme, et nous a donc appris à mettre en pratique nos connaissances dans le domaine algorithmique en collaboration, ainsi qu’être capable de communiquer efficacement et d’envoyer et recevoir des feedbacks. 
+
+		Une présentation finale de notre travail nous a appris à déterminer quels étaient les atouts de notre produit final et de notre collaboration, mais également de mettre au jour quels éléments ont pu bousculer le projet dans son déroulement, et donc comment les résoudre. 
+
+		Bouton pour étudier le programme, et le tester 
+
+		Ajouter exemples de code, et si possible un moyen de les exécuter : fake interpréteur 
+
+	-> SAE 1.03 - Premier semestre de l’année scolaire 2022/23 
+
+		Le but de ce projet fut d’installer un poste pour le développement. Cela à consister à télécharger un système d’exploitation, l’installer sur une machine et télécharger tous les packages nécessaire pour être capable de mener à bien un développement.  
+
+		Cela comprenait par exemple git, Visual studio code, Intellij Idea, ou encore le Java Development Kit.  
+
+		Il fallait enfin être capable d’expliquer et de représenter graphiquement chaque étape de façon simple et concise pour que celles- ci soient compréhensibles pour toutes personnes n’ayant aucune compétence en informatique. 
+
+		Outre la capacité à rapidement être opérationnel pour mener à bien un développement dans de bonnes conditions, j’ai également appris à synthétiser et vulgariser des informations techniques afin de les rendre accessibles par tous. 
+
+		Captures d’écran représentant les étapes de la SAE 
+
+	-> SAE 1.04 - Premier semestre de l’année scolaire 2022/23 
+
+		Ce projet à consister à créer une base de données reprenant diverses informations sur le Titanic, en binôme. 
+
+		Pour atteindre ce but, nous avons dû dans un premier temps rechercher des informations depuis diverses sources, puis les recouper dans l’objectif d’aborder la modélisation de la base avec une bonne connaissance du sujet mais aussi des données correctes et liées entre elles. 
+
+		Après avoir réalisé le schéma relationnel, nous avons pu commencer l'implémentation grâce à PostgreSQL, en créant des fichiers permettant d’insérer les tables et de les supprimer en cas d’erreur, tout en respectant les contraintes imposées. 
+
+		Une fois la base de données complète, une dernière partie du projet consistait à écrire toutes les requêtes pouvant être utiles dans un contexte d’utilisation. 
+
+		Avec ce projet, j’ai appris à mettre en pratiques des compétences qui ont été acquises en cours dans le domaine de la gestion de base de données, et dans un contexte de fonctionnement en entreprise. 
+
+		Le travail en binôme m’a également permis de m’améliorer dans le cadre du travail en équipe. 
+
+		Exemple de requête et commentaires 
+
+	-> SAE 1.0506 - Premier semestre de l’année scolaire 2022/23 
+
+		Le but de ce projet, réalisé en trinôme, a été de créer un site web permettant à un élève de troisième cherchant un stage de facilement consulter des informations vulgarisées sur une entreprise du secteur du numérique (ESN). 
+
+		Dans un premier temps, le travail a consisté à rechercher des informations sur l’entreprise qui nous a été attribué (CGI dans notre cas), et générer un recueil des besoins en vue de la future création du site web. 
+
+		Une fois cette étape complétée, nous avons mis au point le wireframe de notre site, en respectant les besoins précédemment établis.  
+
+		Nous sommes par la suite passés au développement en utilisant les langages HTML et CSS. 
+
+		Au travers de ce projet, j’ai appris à rechercher l’information nécessaire sur internet et à la partager en vue d’une mise en commun avec une équipe. Une partie importante du travail a également consistée à vulgariser ces informations, dans le but de les rendre accessible pour des élèves de troisièmes. 
+
+		Enfin, j’ai appris à suivre un développement complet d’un site web simple, en partant du recueil de besoins jusqu’à la présentation du produit final. 
+
+		Il ne faut pas négliger le travail en équipe, qui a su trouver une place importante dans le projet. En effet, il a fallu savoir partager efficacement et simplement notre travail et notre code, et l’adapter pour rendre le produit final cohérent. 

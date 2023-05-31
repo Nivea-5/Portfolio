@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+  color: beige;
+}
+header ul {
+  background-color: rgb(85, 85, 85);
+}
+header a {
+  background-color: black;
+  color: beige;
+}
+.actif {
+  background-color:beige;
+  color: black;
+}
+footer ul {
+  background-color: rgb(85, 85, 85);
+}
+aside ul, aside h2 {
+  background-color: rgb(85, 85, 85);
+}
+article {
+  background-color: rgb(85, 85, 85);
+}
+.RickRoll {
+  text-decoration: none;
+  color: white;
+}
+main aside:last-child div p {
+  color: white;
+  background-color: rgb(85, 85, 85);
+  border: 2px solid black;
+}
