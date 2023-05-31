@@ -1,12 +1,8 @@
-.background {
-    position:fixed;
-    top: 0;
-    width: 100%;
-    animation: bg-appears 1s;
-}
+
 
 
 .landing {
+    background-image: url(../img/alpes-bg-ai.png);
     width: 100%;
     height: 100%;
     margin-top: -50px;
@@ -83,4 +79,20 @@
 .landing-more .arrow:hover span:nth-child(2) {
     height: 20px;
     transform: translate(0px, 5px);
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------me page*/
+
+.me {
+    display: flex;
+    padding: 100px 300px;
+}
+.me img {
+    width: 300px;
+    border-radius: 50px;
+}
+
+.me div  {
+    margin: 50px 100px;
 }
