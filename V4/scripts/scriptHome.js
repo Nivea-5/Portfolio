@@ -1,5 +1,6 @@
 var body = document.querySelector("body");
 var main = document.querySelector("main");
+var background = document.querySelector(".background");
 
 var landingH1 = document.querySelector(".landing h1");
 var landingH2 = document.querySelector(".landing h2");
@@ -25,6 +26,7 @@ window.addEventListener("scroll", function() {
 
     //-------------------------------------------------------------------------------------------------------------body
 
+    background.style.top = "-"+ratio*200;
     if (ratio<0.350) {
         main.style.backdropFilter = "blur("+ratio*20+"px)";
     } else {
