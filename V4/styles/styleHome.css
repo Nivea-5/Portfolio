@@ -105,7 +105,7 @@ body {
     align-items: center;
     flex-direction: column;
     position: relative;
-    padding: 0 0 200px 0;
+    padding: 0;
 }
 
 .knowMe h1 {
