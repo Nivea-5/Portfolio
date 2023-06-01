@@ -62,12 +62,26 @@ https://fonts.google.com/specimen/Work+Sans
        width: 100%;
     }
 }
+@keyframes bounce {
+    0% {
+        transform: scale(0.5);
+    }
+    70% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 .appears {
     animation: motion-appears 1s;
 }
 .waitAppears {
     animation: wait-then-motion-appears 1.5s;
+}
+.bounce {
+    animation: bounce .5s ease;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------- website*/
