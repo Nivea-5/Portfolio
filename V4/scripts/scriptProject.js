@@ -23,19 +23,19 @@ window.addEventListener("scroll", function() {
     landingH2.style.opacity = 100-ratio*500+"%";
     landingMore.style.opacity = 100-ratio*500+"%";
 
-    if (ratio >= 0.150) {
+    if (ratio >= 0.130) {
         proj1.classList.add("bounce");
         proj1.style.visibility = "visible";
     }
-    if (ratio >= 0.300) {
+    if (ratio >= 0.250) {
         proj2.classList.add("bounce");
         proj2.style.visibility = "visible";
     }
-    if (ratio >= 0.450) {
+    if (ratio >= 0.370) {
         proj3.classList.add("bounce");
         proj3.style.visibility = "visible";
     }
-    if (ratio >= 0.600) {
+    if (ratio >= 0.490) {
         proj4.classList.add("bounce");
         proj4.style.visibility = "visible";
     }
