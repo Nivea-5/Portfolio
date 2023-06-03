@@ -1,0 +1,333 @@
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*
+https://fonts.google.com/specimen/Work+Sans
+*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;800&display=swap');
+
+@keyframes motion-appears {
+    0%  {
+        opacity: 0;
+        transform: translateY(0px); /* l'animation doit commencer à l'emplacement original de l'element, sinon la parallax bug*/
+    }
+    10% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
+@keyframes appears {
+    from {
+       opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes wait-then-motion-appears {
+    0% {
+       opacity: 0;
+       transform: translateY(0px);
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes page-appears {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes bg-appears {
+    from {
+        width: 150%;
+    }
+    to {
+       width: 100%;
+    }
+}
+@keyframes bounce {
+    0% {
+        transform: scale(0.5);
+    }
+    70% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.appears {
+    animation: motion-appears 1s;
+}
+.waitAppears {
+    animation: wait-then-motion-appears 1.5s;
+}
+.bounce {
+    animation: bounce .5s ease;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- website*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Work Sans', sans-serif;
+    animation: page-appears 1s;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- nav bar*/
+
+#menu-btn {
+    display: none;
+}
+#wrap {
+    position: sticky;
+    top: 0;
+    transform: translateX(500px);
+    transition: all .3s ease;
+    z-index: 1;
+}
+nav {
+    display: flex;
+    position: relative;
+    justify-content: end;
+    margin-right: 520px;
+    height: 50px;
+    gap: 20px;
+}
+.home {
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+    height: 30px;
+    padding: 0 30px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    color: #9B9B9B;
+    text-decoration: none;
+    transition: all .1s ease;
+}
+.home:hover {
+    background-color: black;
+    color: white;
+}
+.home:active {
+    transform: scale(0.9);
+}
+.search {
+    margin-top: 20px;
+    display: flex;
+    position: relative;
+}
+.search input {
+    
+    height: 30px;
+    padding: 5px 40px 5px 15px;
+    width: 150px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    border: none;
+    border-radius: 20px;
+    color: #9B9B9B;
+    transition: all .1s ease;
+}
+.search input:focus {
+    background-color: black;
+}
+.search input::placeholder {
+    color: #9B9B9B;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+
+.search input:focus {
+    outline: none;
+}
+.search button {
+    position: absolute;
+    cursor:pointer;
+    top: 5px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: local;
+    background-image: url("../ico/search.png");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: #9B9B9B;
+}
+
+.hamburger {
+    margin-top: 20px;
+    cursor:pointer;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    transition: all .1s ease;
+}
+.hamburger:hover {
+    background-color: black;
+}
+.hamburger:hover span {
+    background-color: white;
+}
+.hamburger:active {
+    transform: scale(0.9);
+}
+.hamburger span:first-child {
+    margin-top: 8px;
+}
+.hamburger span {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:3px;
+    height: 2.5px;
+    width: 17px;
+    border-radius: 3px;
+    background-color: #9B9B9B;
+    transition: all .3s;
+}
+
+.menu {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(25px);
+    list-style: none;
+    height: 100vh;
+    width: 500px;
+    transition: all .3s ease;
+}
+.menu a {
+    color: #9B9B9B;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    transition: all .2s ease;
+    position: relative;
+}
+.menu a:hover {
+    color: white;
+}
+.menu a::after {
+    content: " ";
+    background-color: white;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transition: all .2s ease;
+}
+.menu a:hover::after {
+    width: 260px;
+    height: 3px;
+}
+.menu li:nth-child(2) a:hover::after {
+    width: 230px;
+    height: 3px;
+}
+.menu a:hover::after {
+    width: 260px;
+    height: 3px;
+}
+
+#menu-btn:checked ~ #wrap {
+    transform: translateX(0px);
+}
+#menu-btn:checked ~ #wrap .hamburger span:nth-child(2){
+    visibility: hidden;
+}
+#menu-btn:checked ~ #wrap .hamburger span:nth-child(1){
+    transform: rotate(45deg) translate(4px, 4px);
+}
+#menu-btn:checked ~ #wrap .hamburger span:nth-child(3){
+    transform: rotate(-45deg) translate(4px, -4px);
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- nav bar*/
+
+
+footer{
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(25px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 30px 0px;
+    justify-content: space-around;
+}
+footer>div {
+    display: flex;
+}
+footer p {
+    margin: 0;
+    color:#9B9B9B;
+    text-align: left;
+}
+footer h3 {
+    color:#9B9B9B;
+    margin: 0;
+}
+footer .credit {
+    width: 400px;
+    align-items: start;
+    padding: 0;
+}
+footer .contact {
+    width: 400px;
+    align-items: start;
+    padding: 0;
+}
+footer .social {
+    padding: 0px 0 0px 0;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 0;
+}
+footer .social img {
+    filter: brightness(0.6);
+    width: 50px;
+    transition:all .2s ease;
+}
+footer .social img:hover {
+    filter: none;
+}
