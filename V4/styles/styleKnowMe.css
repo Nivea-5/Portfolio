@@ -90,11 +90,10 @@
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------me page*/
 
-section {
+.me, .scholar, .university {
     margin: 200px 100px 50px 100px;
     padding: 70px;
     display: flex;
-
     visibility: hidden;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);

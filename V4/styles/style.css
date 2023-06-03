@@ -288,8 +288,14 @@ footer{
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(25px);
     display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
     padding: 30px 0px;
     justify-content: space-around;
+}
+footer>div {
+    display: flex;
 }
 footer p {
     margin: 0;

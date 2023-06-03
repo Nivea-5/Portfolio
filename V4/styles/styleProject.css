@@ -85,15 +85,18 @@
 }
 
 
-section {
+section:not(.landing) {
 
-    margin: 200px 100px 50px 100px;
+    margin: 200px 100px 0px 100px;
     padding: 70px;
     display: flex;
-
+    flex-direction: column;
     visibility: hidden;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
     border-radius: 50px;
     color: white;
+}
+section:last-child {
+    margin-bottom: 200px;
 }
