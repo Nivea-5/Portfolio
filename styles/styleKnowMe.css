@@ -90,7 +90,7 @@
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------me page*/
 
-.me, .scholar, .university {
+.me, .scholar, .university, .skill {
     margin: 50px 100px 50px 100px;
     padding: 70px;
     display: flex;
@@ -146,6 +146,22 @@
     font-size: 70px;
 }
 .university p {
+    margin: 50px 0px 0 100px;
+    font-size: 19px;
+    text-align: justify;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------skills page*/
+
+.skill img {
+    width: 400px;
+    margin: 0 0 0 50px;
+}
+.skill h1 {
+    margin: 30px 0 0 100px;
+    font-size: 70px;
+}
+.skill p {
     margin: 50px 0px 0 100px;
     font-size: 19px;
     text-align: justify;

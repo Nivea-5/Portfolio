@@ -5,6 +5,7 @@ var landingMore = document.querySelector(".landing-more");
 var me = document.querySelector(".me");
 var scholar = document.querySelector(".scholar");
 var university = document.querySelector(".university");
+var skill = document.querySelector(".skill");
 
 
 window.addEventListener("scroll", function() {
@@ -25,12 +26,16 @@ window.addEventListener("scroll", function() {
         me.classList.add("bounce");
         me.style.visibility = "visible";
     }
-    if (ratio >= 0.300) {
+    if (ratio >= 0.250) {
         scholar.classList.add("bounce");
         scholar.style.visibility = "visible";
     }
-    if (ratio >= 0.500) {
+    if (ratio >= 0.450) {
         university.classList.add("bounce");
         university.style.visibility = "visible";
+    }
+    if (ratio >= 0.650) {
+        skill.classList.add("bounce");
+        skill.style.visibility = "visible";
     }
 });
