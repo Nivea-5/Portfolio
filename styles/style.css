@@ -5,7 +5,7 @@
 https://fonts.google.com/specimen/Work+Sans
 */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;800&display=swap');
-/*
+
 @media only screen and (max-width: 1000px)  {
     body {
         display: none;
@@ -22,7 +22,7 @@ https://fonts.google.com/specimen/Work+Sans
         font-size: 20px;
     }
 }
-*/
+
 
 @keyframes motion-appears {
     0%  {
