@@ -23,6 +23,48 @@ https://fonts.google.com/specimen/Work+Sans
     }
 }
 
+<<<<<<< HEAD
+=======
+
+@keyframes motion-appears {
+    0%  {
+        opacity: 0;
+        transform: translateY(0px); /* l'animation doit commencer à l'emplacement original de l'element, sinon la parallax bug*/
+    }
+    10% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
+@keyframes appears {
+    from {
+       opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes wait-then-motion-appears {
+    0% {
+       opacity: 0;
+       transform: translateY(0px);
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+>>>>>>> 395111b9835004cdc69dbc8688f9f884bf18714b
 
 @keyframes page-appears {
     from {
