@@ -8,12 +8,7 @@ body {
 }
 */
 
-.background {
-    position:fixed;
-    top: 0;
-    width: 100%;
-    animation: bg-appears 1s;
-}
+
 
 
 .landing {
@@ -109,14 +104,12 @@ body {
 }
 
 .knowMe h1 {
-    visibility: hidden;
 
     font-size: 170px;
     margin: 0px 600px 0 0;
 
 }
 .knowMe h2 {
-    visibility: hidden;
     font-size: 200px;
     margin: 0 500px 0 0;
 }
@@ -131,7 +124,6 @@ body {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
     transition: all .2s ease;
-    visibility: hidden;
 }
 .knowMe .arrow span:first-child {
     position: absolute;
@@ -207,14 +199,14 @@ body {
 }
 
 .project h1 {
-    visibility: hidden;
+
 
     font-size: 170px;
     margin: 0px 400px 0 0;
 
 }
 .project h2 {
-    visibility: hidden;
+
     font-size: 200px;
     margin: 0 800px 0 0;
 }
@@ -230,7 +222,7 @@ body {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
     transition: all .2s ease;
-    visibility: hidden;
+
 }
 .project .arrow span:first-child {
     position: absolute;

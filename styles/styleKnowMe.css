@@ -90,16 +90,23 @@
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------me page*/
 
-.me, .scholar, .university, .skill {
+
+section:not(.landing) {
+
     margin: 50px 100px 50px 100px;
     padding: 70px;
     display: flex;
-    visibility: hidden;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
     border-radius: 50px;
     color: white;
 }
+
+section:not(.landing) img {
+    width: 400px;
+}
+
+
 .me img {
     width: 250px;
     height: 300px;
@@ -110,25 +117,20 @@
     margin: 0px 0px 50px 100px;
 }
 .me h1 {
-    margin: 30px 0;
+    margin: 30px 0 0 0px;
     font-size: 70px;
 }
 .me p {
-    margin: 50px 0 0 0;
+    margin: 50px 100px 0 0;
     font-size: 19px;
     text-align: justify;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------scholar page*/
 
-.scholar img {
-    width: 400px;
-}
-.scholar div  {
-    margin: 0px 0px 0px 0px;
-}
+
 .scholar h1 {
-    margin: 30px 0;
+    margin: 30px 0 0 0px;
     font-size: 70px;
 }
 .scholar p {
@@ -138,9 +140,7 @@
 }
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------university page*/
 
-.university img {
-    width: 400px;
-}
+
 .university h1 {
     margin: 30px 0 0 100px;
     font-size: 70px;
@@ -153,10 +153,7 @@
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------skills page*/
 
-.skill img {
-    width: 400px;
-    margin: 0 0 0 50px;
-}
+
 .skill h1 {
     margin: 30px 0 0 100px;
     font-size: 70px;

@@ -92,7 +92,6 @@ section:not(.landing) {
     display: flex;
     text-align: justify;
     flex-direction: column;
-    visibility: hidden;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
     border-radius: 50px;

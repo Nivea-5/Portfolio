@@ -23,44 +23,6 @@ https://fonts.google.com/specimen/Work+Sans
     }
 }
 
-@keyframes motion-appears {
-    0%  {
-        opacity: 0;
-        transform: translateY(0px); /* l'animation doit commencer à l'emplacement original de l'element, sinon la parallax bug*/
-    }
-    10% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100% {
-        opacity: 100;
-        transform: translateY(0px);
-    }
-}
-@keyframes appears {
-    from {
-       opacity: 0;
-    }
-    to {
-        opacity: 100;
-    }
-}
-
-@keyframes wait-then-motion-appears {
-    0% {
-       opacity: 0;
-       transform: translateY(0px);
-    }
-    30% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    100% {
-        opacity: 100%;
-        transform: translateY(0px);
-    }
-}
 
 @keyframes page-appears {
     from {
@@ -79,27 +41,7 @@ https://fonts.google.com/specimen/Work+Sans
        width: 100%;
     }
 }
-@keyframes bounce {
-    0% {
-        transform: scale(0.5);
-    }
-    70% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
 
-.appears {
-    animation: motion-appears 1s;
-}
-.waitAppears {
-    animation: wait-then-motion-appears 1.5s;
-}
-.bounce {
-    animation: bounce .5s ease;
-}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------- website*/
 
@@ -112,6 +54,13 @@ body {
     overflow-x: hidden;
     font-family: 'Work Sans', sans-serif;
     animation: page-appears 1s;
+}
+
+.background {
+    position:fixed;
+    top: 0;
+    width: 100%;
+    animation: bg-appears 1s;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------- nav bar*/
@@ -153,51 +102,6 @@ nav {
 }
 .home:active {
     transform: scale(0.9);
-}
-.search {
-    margin-top: 20px;
-    display: flex;
-    position: relative;
-}
-.search input {
-    
-    height: 30px;
-    padding: 5px 40px 5px 15px;
-    width: 150px;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(15px);
-    border: none;
-    border-radius: 20px;
-    color: #9B9B9B;
-    transition: all .1s ease;
-}
-.search input:focus {
-    background-color: black;
-}
-.search input::placeholder {
-    color: #9B9B9B;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 16px;
-}
-
-.search input:focus {
-    outline: none;
-}
-.search button {
-    position: absolute;
-    cursor:pointer;
-    top: 5px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: local;
-    background-image: url("../ico/search.png");
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    color: #9B9B9B;
 }
 
 .hamburger {
