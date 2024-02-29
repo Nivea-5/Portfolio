@@ -1,6 +1,7 @@
 function parallax(element, direction, speed) {
     speed = speed/10;
     var scrollY = window.scrollY;
+    const rect = element.getBoundingClientRect();
     if (direction == "up") {
         element.style.transform = `translate3d(0, ${scrollY * -speed}px, 0)`;
     } else if (direction == "down") {
@@ -11,26 +12,30 @@ function parallax(element, direction, speed) {
         element.style.transform = `translate3d(${scrollY * speed}px, 0px, 0)`;
     }
 }
+function isOnScreen(element) {
+      
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    return (rect.bottom <= (windowHeight+rect.height-300));
+}
+
 function appearsOnScroll(element) {
-    element.style.opacity = 100-(Math.abs((element.getBoundingClientRect().top- element.clientHeight) / (window.innerHeight))*150)+ "%";
+    
+    if (isOnScreen(element) && !element.classList.contains("visible")) {
+        element.classList.add("visible");
+    }
 }
 
-function carrouselOnScroll(element) {
-    var ratio = .2;
-    var scaleValue = 1 - (Math.abs((element.getBoundingClientRect().top- (element.clientHeight/1.5)) / window.innerHeight) * ratio);
-    scaleValue = Math.max(0, Math.min(1, scaleValue));
+let project = document.querySelector(".project");
 
-    element.style.transform = "scale(" + scaleValue + ")";
-}
+let main = document.querySelector("main");
 
-var main = document.querySelector("main");
+let parallaxElem = document.querySelectorAll(".parallax");
 
-var parallaxElem = document.querySelectorAll(".parallax");
+let background = document.querySelector(".background");
 
 window.addEventListener("scroll", function() {
-    console.log(parallaxElem);
     parallaxElem.forEach(function(element, index) {
-        console.log("test");
         if (element.classList.contains("p-up")) {
             parallax(element, "up", 1);
         }
@@ -46,20 +51,18 @@ window.addEventListener("scroll", function() {
         if (element.classList.contains("scroll-appears")) {
             appearsOnScroll(element);
         }
-        if (element.classList.contains("scroll-carrousel")) {
-            carrouselOnScroll(element);
-        }
-    });
-    
+    });    
     
 
-    /*
-    if (ratio<0.350) {
-        main.style.backdropFilter = "blur("+ratio*20+"px)";
-    } else {
-        main.style.backdropFilter = "blur(8px)";
+    if (this.window.scrollY<150) {
+        if (background.classList.contains("background-scrolled")) {
+            background.classList.remove("background-scrolled");
+        }    } else {
+        if (!background.classList.contains("background-scrolled")) {
+            background.classList.add("background-scrolled");
+        }
     }
-    */
+    
 
 
 });

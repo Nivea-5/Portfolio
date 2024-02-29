@@ -4,7 +4,7 @@
 /*
 https://fonts.google.com/specimen/Work+Sans
 */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @media only screen and (max-width: 1000px)  {
     body {
@@ -23,6 +23,23 @@ https://fonts.google.com/specimen/Work+Sans
     }
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #3c5275;
+    border-radius: 15px;
+    transition: all .2s ease;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #222f45;
+  }
 
 @keyframes page-appears {
     from {
@@ -35,10 +52,38 @@ https://fonts.google.com/specimen/Work+Sans
 
 @keyframes bg-appears {
     from {
-        width: 150%;
+        opacity: 0.5;
+        filter: blur(5px);
+        transform: scale(1.5);
     }
     to {
-       width: 100%;
+       opacity: 0.9;
+       filter: blur(0px);
+       transform: scale(1);
+    }
+}
+
+@keyframes bg-scroll {
+    from {
+        opacity: 0.9;
+        transform: scale(1);
+        filter: blur(0px);
+    }
+    to {
+       opacity: 0.5;
+       filter: blur(5px);
+       transform: scale(1.5);
+    }
+}
+
+@keyframes appears-scroll {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+       opacity: 1;
+       transform: scale(1);
     }
 }
 
@@ -52,15 +97,110 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
-    font-family: 'Work Sans', sans-serif;
-    animation: page-appears 1s;
+    font-family: "Montserrat", sans-serif;
+    animation: page-appears 1s ease;
+    z-index: 1;
+}
+
+.scroll-appears {
+    opacity: 0;
+}
+
+.visible {
+    animation: appears-scroll 1s ease;
+
+    opacity: 1;
+}
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 20vh;
+    color: black;
+    margin: 0;
+}
+
+.title-small {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 13vh;
+    color: black;
+    margin: 0;
 }
 
 .background {
     position:fixed;
     top: 0;
     width: 100%;
-    animation: bg-appears 1s;
+    opacity: 0.9;
+    filter: blur(0px);
+    z-index: -1;
+    animation: bg-appears 1s ease;
+}
+
+.background-scrolled {
+    animation: bg-scroll 1s ease;
+    opacity: 0.5;
+    filter: blur(5px);
+    z-index: -1;
+
+    transform: scale(1.5);
+
+}
+
+.arrow {
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    transition: all .2s ease;
+}
+.arrow span:first-child {
+    background-color: #9B9B9B;
+    border-radius: 5px;
+    width: 5%;
+    height: 25%;
+    margin-top: 15%;
+    margin-right: 3%;
+    transform: rotate(-45deg);
+    transition: all .2s ease;
+
+}
+.arrow span:nth-child(2) {
+    background-color: #9B9B9B;
+    border-radius: 5px;
+    width: 5%;
+        height: 30%;
+    align-items: center;
+    transition: all .2s ease;
+}
+.arrow span:last-child {
+    background-color: #9B9B9B;
+    border-radius: 5px;
+    width: 5%;
+        height: 25%;
+    margin-top: 15%;
+    margin-left: 3%;
+    transform: rotate(45deg);
+    transition: all .2s ease;
+
+}
+
+.arrow:hover span:nth-child(2) {
+    height: 40%;
+    transform: translateY(-10%);
+}
+
+.arrow:hover span {
+    background-color: white;
+}
+
+.arrow:hover {
+    background-color: black;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------- nav bar*/
@@ -73,7 +213,7 @@ body {
     top: 0;
     transform: translateX(500px);
     transition: all .3s ease;
-    z-index: 1;
+    z-index: 500;
 }
 nav {
     display: flex;
