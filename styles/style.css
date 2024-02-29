@@ -6,22 +6,9 @@ https://fonts.google.com/specimen/Work+Sans
 */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-@media only screen and (max-width: 1000px)  {
-    body {
-        display: none;
-    }
-    html {
-        display: flex;
-        background-color: white;
-        justify-content: center;
-    }
-    html::after {
-        content: "Désolé, la version mobile n'est pas encore prise en charge";
-        align-items: center;
-        font-family: sans-serif;
-        font-size: 20px;
-    }
-}
+
+
+
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -92,6 +79,7 @@ https://fonts.google.com/specimen/Work+Sans
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -205,25 +193,30 @@ body {
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------- nav bar*/
 
-#menu-btn {
-    display: none;
-}
-#wrap {
-    position: sticky;
-    top: 0;
-    transform: translateX(500px);
-    transition: all .3s ease;
-    z-index: 500;
-}
 nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
-    position: relative;
     justify-content: end;
-    margin-right: 520px;
     height: 50px;
+    gap: 20px;
+    z-index: 500;
+    transform: translateX(30%);
+    transition: all .3s ease;
+}
+
+.nav-expand {
+    transform: translateX(0vh);
+}
+
+nav div {
+    display: flex;
     gap: 20px;
 }
 .home {
+    z-index: 500;
+
     align-items: center;
     display: flex;
     margin-top: 20px;
@@ -245,6 +238,9 @@ nav {
 }
 
 .hamburger {
+    z-index: 500;
+    border: none;
+    padding: 0;
     margin-top: 20px;
     cursor:pointer;
     background: rgba(0, 0, 0, 0.6);
@@ -252,6 +248,8 @@ nav {
     border-radius: 20px;
     height: 30px;
     width: 30px;
+    min-width: 30px;
+    min-height: 30px;
     transition: all .1s ease;
 }
 .hamburger:hover {
@@ -267,6 +265,8 @@ nav {
     margin-top: 8px;
 }
 .hamburger span {
+    z-index: 500;
+
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -279,11 +279,12 @@ nav {
 }
 
 .menu {
-    position: absolute;
+    z-index: 500;
+
     margin: 0;
     padding: 0;
-    top: 0;
-    right: 0;
+    height: 100vh;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,8 +293,6 @@ nav {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(25px);
     list-style: none;
-    height: 100vh;
-    width: 500px;
     transition: all .3s ease;
 }
 .menu a {
@@ -330,16 +329,14 @@ nav {
     height: 3px;
 }
 
-#menu-btn:checked ~ #wrap {
-    transform: translateX(0px);
-}
-#menu-btn:checked ~ #wrap .hamburger span:nth-child(2){
+
+.hamburger-open span:nth-child(2){
     visibility: hidden;
 }
-#menu-btn:checked ~ #wrap .hamburger span:nth-child(1){
+.hamburger-open span:nth-child(1){
     transform: rotate(45deg) translate(4px, 4px);
 }
-#menu-btn:checked ~ #wrap .hamburger span:nth-child(3){
+.hamburger-open span:nth-child(3){
     transform: rotate(-45deg) translate(4px, -4px);
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------- nav bar*/
@@ -391,4 +388,79 @@ footer .social img {
 }
 footer .social img:hover {
     filter: none;
+}
+
+@media only screen and (max-width: 800px)  {
+    img {
+        display: none;
+    }
+    body::before {
+        content: ' ';
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        background: url("../img/moutains.jpg") no-repeat fixed;
+        background-position: top;
+        background-size: 200vh;
+        transition: all .3s ease;
+    }
+    body {
+        
+        overflow-x: hidden;
+    }
+
+    .scrolled::before {
+       opacity: 0.2;
+    }
+
+    nav {
+
+        transform: translateX(100%);
+    }
+
+    nav div  {
+        z-index: 600;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        gap: 10px;
+        padding-right: 10px;
+        transition: all .3s ease;
+    }
+    
+
+    .nav-expand div {
+        right: 0;
+    } 
+    .menu {
+        z-index: 5;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 60px;
+    }
+    .title-small {
+        font-size: 40px;
+    }
+
+    section:not(.landing) p {
+        font-size: 20px;
+    }
+    
+    footer > div{
+        margin: 10px;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 15px;
+        max-width: 90%;
+    }
+
+    footer > div > div {
+        max-width: 90%;
+    }
 }

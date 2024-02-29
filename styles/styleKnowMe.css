@@ -73,3 +73,14 @@ section:not(.landing) > div >div {
     object-fit:cover;
     margin: 0;
 }
+
+@media only screen and (max-width: 800px)  {
+    section:not(.landing) h1 {
+        font-size: 40px;
+    }
+
+    section:not(.landing) > div p, section:not(.landing) > div ul {
+        font-size: 20px;
+
+    }
+}

@@ -34,6 +34,23 @@ let parallaxElem = document.querySelectorAll(".parallax");
 
 let background = document.querySelector(".background");
 
+let hamburgerButton = document.querySelector(".hamburger");
+
+let nav = document.querySelector("nav");
+
+
+hamburgerButton.addEventListener("click", () => {
+    if (nav.classList.contains("nav-expand")) {
+        nav.classList.remove("nav-expand");
+        hamburgerButton.classList.remove("hamburger-open");
+    } else {
+        nav.classList.add("nav-expand");
+        hamburgerButton.classList.add("hamburger-open");
+    }
+    
+});
+
+
 window.addEventListener("scroll", function() {
     parallaxElem.forEach(function(element, index) {
         if (element.classList.contains("p-up")) {
@@ -66,3 +83,18 @@ window.addEventListener("scroll", function() {
 
 
 });
+
+if (window.innerWidth <= 800) {
+    let body = document.querySelector("body");
+
+    window.addEventListener("scroll", function() {
+        if (this.window.scrollY<150) {
+            if (body.classList.contains("scrolled")) {
+                body.classList.remove("scrolled");
+            }    } else {
+            if (!body.classList.contains("scrolled")) {
+                body.classList.add("scrolled");
+            }
+        }
+})
+}
