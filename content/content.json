@@ -1,7 +1,49 @@
 {
     "me_connaitre" : {
-        "description" : "Bonjour, je m'appel Maël Garnier. Je suis passioné d'informatique, de sport de montagne et d'automobile. Fort de compétences variées en programmation, je suis prêt à relever de nouveaux défis et à contribuer au succès de vos projets.",
-        "lycee" : "J'ai été scolarisé dans la cité scolaire du diois (Die, Drôme) dans lequel j’ai choisi de suivre les spécialités LLCER anglais (langue, littérature et culture étrangere et régional) et Mathématiques."
+        "description" : {
+            "id" : "me",
+            "title" : "A propos de moi",
+            "tags" : [""],
+            "imageSrc" : "/img/photo-profil.jpg",
+            "content" : [
+                "Bonjour, je m'appel Maël Garnier. Je suis passioné d'informatique, de sport de montagne et d'automobile.",
+                "Fort de compétences variées en programmation, je suis prêt à relever de nouveaux défis et à contribuer au succès de vos projets."
+            ] 
+        },
+        "lycee" : {
+            "id" : "lycee",
+            "title" : "Lycée",
+            "tags" : [""],
+            "imageSrc" : "/img/me connaitre_lycee.svg",
+            "content" : [
+                "J'ai été scolarisé dans la cité scolaire du diois (Die, Drôme) dans lequel j’ai choisi de suivre les spécialités LLCER anglais (langue, littérature et culture étrangere et régional) et Mathématiques."
+            ]
+        },
+        "universitee" : {
+            "id" : "universitee",
+            "title" : "Universitée",
+            "tags" : [""],
+            "imageSrc" : "/img/me_connaitre_universite.svg",
+            "content" : [
+                "Actuellement étudiant en informatique à l’IUT2 de Grenoble, j'ai choisi ce parcours pour l'accompagnementet la professionnalisation.",
+                "Celui-ci m'a permis d'approfondir des compétences tel quel savoir mener à bien un projet, communiquer avec une équipe, mais aussi mettre en pratique un savoir-faire théorique en situation réelle."
+            ]
+        },
+        "competences" : {
+            "id" : "competences",
+            "title" : "Mes compétences",
+            "tags" : [""],
+            "imageSrc" : "/img/me_connaitre_competences.svg",
+            "content" : [
+                "Le choix de la spécialité LLCE anglais au lycée a grandement amélioré mon niveau dans cette langue, me permettant d’atteindre un niveau C1. ",
+                "Durant mon parcours universitaire, j'ai su développer en cours et en autonomie de nouvelles compétences : ",
+                " - Développement (Java, C, C++, C#, Kotlin, assembleur, python)",
+                " - Web (HTML, CSS, JavaScript, Node.js, React.js, PHP, Symfony",
+                " - Bases de données (SQL, postgreSQL, SQLite)",
+                " - Infrastructure réseaux et déploiements de serveurs",
+                " - Conduite de projet (méthodes agiles, SQUARE)"
+            ]
+        }
     }
 }
 
