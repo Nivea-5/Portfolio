@@ -90,6 +90,29 @@ body {
     z-index: 1;
 }
 
+.landing {
+    width: 100%;
+    height: 100%;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.landing .title {
+    margin: 0;
+}
+
+.landing p {
+    display: flex;
+    font-weight: 500;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .scroll-appears {
     opacity: 0;
 }

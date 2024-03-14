@@ -1,0 +1,48 @@
+
+section:not(.landing) {
+    color: black;
+    width: 80%;
+    padding: 3% 10%;
+}
+
+
+section:not(.landing) img {
+    width: 30%;
+    margin: 5% 0;
+}
+
+section:not(.landing) h1 {
+    font-size: 10vh;
+    margin: 0;
+}
+
+section:not(.landing) div {
+    margin: 3% 5%;
+    display: flex;
+    align-items: flex-start;
+    gap: 5%;
+}
+
+section:not(.landing) > div p, section:not(.landing) > div ul {
+    margin: 10px 0;
+    font-size: 4vh;
+    font-weight: 500;
+    text-align: justify;
+}
+
+section:not(.landing) > div >div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media only screen and (max-width: 800px)  {
+    section:not(.landing) h1 {
+        font-size: 40px;
+    }
+
+    section:not(.landing) > div p, section:not(.landing) > div ul {
+        font-size: 20px;
+
+    }
+}
