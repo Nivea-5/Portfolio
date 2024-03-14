@@ -49,12 +49,12 @@ class Element {
         let divElement = document.createElement('div');
 
         //image
-        
-        let imgElement = document.createElement('img');
-        imgElement.setAttribute('src', '../'+this.#imgSrc);
-        imgElement.setAttribute('alt', 'img' + this.#id);
-        divElement.appendChild(imgElement);
-        
+        if (this.#imgSrc != "") {
+            let imgElement = document.createElement('img');
+            imgElement.setAttribute('src', '../'+this.#imgSrc);
+            imgElement.setAttribute('alt', 'img' + this.#id);
+            divElement.appendChild(imgElement);
+        }
 
         //tags
         /*
