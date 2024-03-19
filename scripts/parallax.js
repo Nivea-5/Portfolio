@@ -1,25 +1,25 @@
+
 class Parallax {
     /**
      * permet de gerer la parallax pour un element html
+     * ATTENTION incompatible avec appearsOnScroll à cause du délai d'animation (css) qui cause un décalage
      * @param {*} element l'element html
      * @param {*} direction up, down, left ou right selon la direction désirée
      * @param {*} speed la vitesse de déplacement de l'element. Par défaut 1.
      */
-    move(element, direction, speed=1) {
-        speed = speed/10;
-        var scrollY = window.scrollY;
-        const rect = element.getBoundingClientRect();
+    move(element, direction, speed = 1) {
+        speed = speed / 10;
+        let scrollDifference = window.scrollY;
         if (direction == "up") {
-            element.style.transform = `translate3d(0, ${scrollY * -speed}px, 0)`;
+            element.style.transform = `translate3d(0, ${scrollDifference * -speed}px, 0)`;
         } else if (direction == "down") {
-            element.style.transform = `translate3d(0, ${scrollY * speed}px, 0)`;
+            element.style.transform = `translate3d(0, ${scrollDifference * speed}px, 0)`;
         } else if (direction == "left") {
-            element.style.transform = `translate3d(${scrollY * -speed}px, 0px, 0)`;
+            element.style.transform = `translate3d(${scrollDifference * -speed}px, 0px, 0)`;
         } else if (direction == "right") {
-            element.style.transform = `translate3d(${scrollY * speed}px, 0px, 0)`;
+            element.style.transform = `translate3d(${scrollDifference * speed}px, 0px, 0)`;
         }
     }
-
     /**
      * permet de determiner un element html est affiché sur l'ecran
      * @param {*} element 

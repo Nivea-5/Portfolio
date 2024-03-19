@@ -39,6 +39,8 @@ xhr.send();
 
 const parallax = new Parallax();
 
+
+
 /**
  * gestion du clic sur le menu "hamburger"
  */
@@ -59,16 +61,16 @@ View.hamburgerButton.addEventListener("click", () => {
 window.addEventListener("scroll", function() {
     //gestion de la parallax
     View.parallaxElem.forEach(function(element, index) {
-        if (element.classList.contains("p-up")) {
+        if (element.classList.contains("up")) {
             parallax.move(element, "up", 1);
         }
-        if (element.classList.contains("p-down")) {
+        if (element.classList.contains("down")) {
             parallax.move(element, "down", 1);
         }
-        if (element.classList.contains("p-left")) {
+        if (element.classList.contains("left")) {
             parallax.move(element, "left", 1);
         }
-        if (element.classList.contains("p-right")) {
+        if (element.classList.contains("right")) {
             parallax.move(element, "right", 1);
         }
         if (element.classList.contains("scroll-appears")) {

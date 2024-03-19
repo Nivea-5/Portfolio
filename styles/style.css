@@ -20,13 +20,13 @@ https://fonts.google.com/specimen/Work+Sans
   
   ::-webkit-scrollbar-thumb {
     background: #3c5275;
-    border-radius: 15px;
     transition: all .2s ease;
   }
   
   ::-webkit-scrollbar-thumb:hover {
     background: #222f45;
   }
+
 
 @keyframes page-appears {
     from {
@@ -119,14 +119,13 @@ body {
 
 .visible {
     animation: appears-scroll 1s ease;
-
     opacity: 1;
 }
 
 .title {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
-    font-size: 20vh;
+    font-size: 130px;
     color: black;
     margin: 0;
 }
@@ -134,9 +133,13 @@ body {
 .title-small {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
-    font-size: 13vh;
+    font-size: 60px;
     color: black;
     margin: 0;
+}
+
+p {
+    font-size: 20px;
 }
 
 .background {
@@ -160,8 +163,8 @@ body {
 }
 
 .arrow {
-    width: 10vh;
-    height: 10vh;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -379,6 +382,7 @@ footer>div {
     display: flex;
 }
 footer p {
+    font-size: 20px;
     margin: 0;
     color:#9B9B9B;
     text-align: left;
@@ -474,6 +478,10 @@ footer .social img:hover {
     section:not(.landing) p {
         font-size: 20px;
     }
+
+    footer p {
+        font-size: 15px;
+    }
     
     footer > div{
         margin: 10px;
@@ -486,4 +494,5 @@ footer .social img:hover {
     footer > div > div {
         max-width: 90%;
     }
+
 }
