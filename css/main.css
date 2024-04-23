@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --Rhino: #364A6A;
+    --Blue-Dianne: #1C3043;
+    --Mystic: #DAE3EB;
+    --Mystic-hover: #bdc6cd;
+    --background: #3a3f42b1;
+    --Jaffa: #F27D4F;
+  }
+
+  * {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+@keyframes from-top {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-from-bottom {
+    from {
+        transform: scale(.5) translateY(500px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-from-bottom-reverse {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(.5) translateY(500px);
+        opacity: 0;
+    }
+}
+
+@keyframes zoom-reverse {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        
+        transform: scale(.5);
+        opacity: 0;
+    }
+}
+
+@keyframes bg-appears {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: var(--background);
+    }
+}
+
+@keyframes bg-disappears {
+    from {
+        background-color: var(--background);
+    }
+    to {
+        
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes element-appears {
+    from {
+        transform: scale(.4);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 6vw;
+    font-weight: 800;
+    margin: 0;
+    color: var(--Blue-Dianne);
+
+}
+
+h2 {
+    font-size: 4vw;
+    font-weight: 700;
+    margin: 0;
+    color: var(--Blue-Dianne);
+
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+}
+
+p {
+    
+    font-weight: 300;
+    margin: 0;
+}
+
+.appearsOnScroll {
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+    animation: element-appears .7s ease;
+}
+
+.button-light {
+    color: var(--Blue-Dianne);
+    text-decoration: none;
+    background-color: var(--Mystic);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.button-dark {
+    color: var(--Mystic);
+    text-decoration: none;
+    background-color: var(--Blue-Dianne);
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+
+    transition: all .3s ease;
+}
+
+.link {
+    text-decoration: underline;
+    color: var(--Jaffa);
+}
+
+.button-light:hover, .button-dark:hover {
+    background-color: var(--Jaffa);
+    color: black;
+    box-shadow: 0px 7px 0px var(--Blue-Dianne);
+    transform: translateY(-7px);
+}
+
+.button-light:active, .button-dark:active {
+    background-color: var(--Jaffa);
+    color: black;
+    box-shadow: 0px 0px 0px 7px var(--Blue-Dianne);
+    transform: translateY(-7px);
+}
+
+body {
+    background-image: url(../img/moutains.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
+
+
+.container {
+    position: absolute;
+    top: 100px;
+    margin: 0 5%;
+    width: 90%;
+    height: calc(100% - 100px);
+        border-radius: 50px 50px 0 0;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    animation: zoom-from-bottom .5s ease;
+    transition: all .3s ease;
+}
+
+.container-hide {
+    transform: translateY(100%);
+}
+
+main {
+    padding: 5%;
+    width: 90%;
+    min-height: 100%;
+    border-radius: 50px;
+    background-color: var(--Mystic);
+    transition: all .3s ease;
+}
+
+
+@media (max-width: 899px) {
+
+    h1 {
+        font-size: 35px;
+        font-weight: 700;
+        margin: 0;
+        color: var(--Blue-Dianne);
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0;
+        color: var(--Blue-Dianne);
+    }
+    
+    h3 {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0;
+    }
+    
+    .container {
+        position: absolute;
+        top: 100px;
+        margin: 0;
+        width: 100%;
+        height: calc(100% - 100px);
+        border-radius: 50px 50px 0 0;
+        overflow: hidden;
+        overflow-y: auto;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        animation: zoom-from-bottom .5s ease;
+        transition: all .3s ease;
+    }
+    
+    .container-hide {
+        transform: translateY(100%);
+    }
+    
+    main {
+        padding: 5%;
+        width: 90%;
+        min-height: 100%;
+        border-radius: 50px;
+        background-color: var(--Mystic);
+        transition: all .3s ease;
+    }
+
+    .button-light:hover, .button-dark:hover {
+        box-shadow: none;
+        transform: none;
+    }
+
+    .button-light:hover,  .button-light:active{
+        background-color: var(--Mystic);
+        color: black;
+    }
+
+    .button-dark:hover, .button-dark:active {
+        background-color: var(--Blue-Dianne);
+        color: var(--Mystic);
+    }
+    
+    .button-light:active, .button-dark:active {
+        box-shadow: none;
+        transform: none;
+    }
+}

@@ -1,116 +1,88 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styleHome.css">
-    <link rel="stylesheet" href="./styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Maël Garnier : accueil</title>
+  </head>
+  <body class="">
+    <div class="container">
+      <main id="top">
+        <section class="intro">
+          <h1>Maël Garnier</h1>
+          <h3>
+            FullStack developper <br />
+            étudiant en informatique
+          </h3>
+          <p>
+            Au travers de ce portfolio, tu pourras en apprendre plus sur moi,
+            mes compétences, mes projets, mon expérience, ... En fait, tout ce
+            qui fera de moi le développeur parfait pour votre entreprise !
+          </p>
+          <a href="#aboutMe" class="button-dark">En apprendre plus</a>
+        </section>
 
-    <title>Portfolio - Accueil</title>
-    <link rel="shortcut icon" href="./ico/favicon.png" type="image/x-icon">
+        <section id="aboutMe">
+          <img
+            src="./img/barsac.jpg"
+            alt="illustration Barsac"
+            class="appearsOnScroll"
+          />
+          <div>
+            <h2>A propos de moi</h2>
+            <p>
+              Au travers de ce portfolio, tu pourras en apprendre plus sur moi,
+              mes compétences, mes projets, mon expérience, ... En fait, tout ce
+              qui fera de moi le développeur parfait pour votre entreprise !
+            </p>
+          </div>
+        </section>
 
-</head>
+        <section>
+          <div>
+            <h2>Mes passions</h2>
 
-
-    <body>    
-        <header>
-
-            <nav>
-
-                <div>
-                    <a href="#" class="home">Accueil</a>
-                
-
-                    <label class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
-                </div>
-                
-                
-                <ul class="menu">
-                    <li><a href="./me_connaitre.html">Me connaitre</a></li>
-                    <li><a href="./projets.html">Mes projets</a></li>
-                </ul>
-            </nav>
-
-            
-
-            
-        
-        </header>
-
-        <img src="./img/moutains.jpg" alt="background" class="background">
-
-        <main>
-            <section class="landing">
-                <h1  class="parallax left title">Maël</h1>
-                <h2  class="parallax right title">Garnier</h2>
-
-                <p>En savoir plus</p>
-                <a href="#knowMe" class="arrow">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-            </section>
-
-            <section class="knowMe parallax scroll-appears" id="knowMe">
-                <img src="./img/me_connaitre.svg"/>
-                
-                <div>
-                    <h1 class="title-small">Me connaître</h1>
-                    <p>En apprendre plus sur moi, mon parcours, mes compétences.</p>
-
-                    <a href="./me_connaitre.html" class="arrow">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                </div>
-                
-                
-            </section>
-
-            <section class="project parallax scroll-appears">
-                <img src="./img/projets.svg" class=" parallax p-down"/>
-
-                
-                <div>
-                    <h1 class="title-small ">Mes projets</h1>
-                <p>Découvrir mes projets universitaires menés sur deux années à l'IUT2 de Grenoble</p>
-                    <a href="./projets.html" class="arrow">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                </div>
-                
-            </section>
-
-        </main>
-
-        <footer>
-            <div>
-                <div class="credit">
-                    <p>créé par Maël Garnier</p>
-                    <p>IUT2 informatique Grenoble - 2eme Année - A31</p>
-                </div>
-    
-                <div class="contact">
-                    <h3>Contact</h3>
-                    <p>mail : mael.garnier@etu.univ-grenoble-alpes.fr</p>
-                </div>
-    
-                <div class="social">
-                    <a href="https://github.com/mael-grn"><img src="./ico/25231.png" alt="github"></a>
-                    <a href="https://twitter.com/MaelGarnier3"><img src="./ico/1384033.png" alt="twitter"></a>
-                </div>
+            <p>
+              Au travers de ce portfolio, tu pourras en apprendre plus sur moi,
+              mes compétences, mes projets, mon expérience, ... En fait, tout ce
+              qui fera de moi le développeur parfait pour votre entreprise !
+            </p>
+            <div class="img-block">
+              <img
+                src="./img/vtt.jpg"
+                alt="illustration VTT"
+                class="appearsOnScroll"
+              />
+              <img
+                src="./img/ski.jpg"
+                alt="illustration SKI"
+                class="appearsOnScroll"
+              />
             </div>
-            
-        </footer>
-    </body>
-    <script type="module" src="./scripts/main.js"></script>
+          </div>
+        </section>
 
+        <section>
+          <img
+            src="./img/lycee-du-diois.jpg"
+            alt="illustration Lycée du diois"
+            class="appearsOnScroll"
+          />
+          <div>
+            <h2>Mon parcours</h2>
+            <p>
+              Au travers de ce portfolio, tu pourras en apprendre plus sur moi,
+              mes compétences, mes projets, mon expérience, ... En fait, tout ce
+              qui fera de moi le développeur parfait pour votre entreprise !
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer></footer>
+    </div>
+
+    <script type="module" src="js/index.js"></script>
+  </body>
 </html>

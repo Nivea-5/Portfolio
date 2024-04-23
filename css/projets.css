@@ -1,0 +1,29 @@
+
+.intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7%;
+}
+
+.intro p {
+    text-align: center;
+    width: 50%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+@media (max-width: 899px) {
+
+    main {
+        padding: 10% 5%;
+    }
+    main > p {
+        width: 100%;
+    }
+}
