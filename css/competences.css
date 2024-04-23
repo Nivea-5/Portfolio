@@ -24,7 +24,7 @@ section:not(.intro) .tags {
 }
 
 section:not(.intro) .tags span {
-    background-color: var(--Mystic-hover);
+    background-color: var(--color-ui-hover);
     padding: 5px 10px;
     border-radius: 10px;
     transition: all .3s ease;
@@ -59,7 +59,7 @@ section:not(.intro) div {
     flex-direction: column;
 }
 section:not(.intro) h2 {
-    color: var(--Blue-Dianne);
+    color: var(--color-primary);
 }
 section:not(.intro) p {
     width: 100%;
@@ -75,10 +75,13 @@ section:not(.intro) p {
     }
 
     .intro {
-        height: calc(100vh - 100px);
         align-items: center;
         margin: 0;
         justify-content: center;
+    }
+
+    .intro h1 {
+        text-align: center;
     }
     
     section:not(.intro) img {
@@ -87,10 +90,18 @@ section:not(.intro) p {
     section:not(.intro) div {
         justify-content: center;
         align-items: center;
+        width: 100%;
+    }
+    section:not(.intro) p {
+        width: 100%;
     }
 
-    section:not(.intro) p {
-        text-align: center;
+    section:not(.intro) h2 {
+        width: 100%;
+    }
+
+    section:not(.intro) .tags {
+        display: none;
     }
     
 }

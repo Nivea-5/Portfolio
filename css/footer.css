@@ -3,8 +3,8 @@ footer {
     border-radius: 50px 50px 0 0;
     padding: 30px 15px;
     gap: 15px;
-    background-color: var(--Blue-Dianne);
-    color: var(--Mystic);
+    background-color: var(--color-primary);
+    color: var(--color-ui);
     display: flex;
     flex-direction: column;
     justify-content: center;

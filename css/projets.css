@@ -23,7 +23,7 @@ main {
     main {
         padding: 10% 5%;
     }
-    main > p {
+    .intro p {
         width: 100%;
     }
 }

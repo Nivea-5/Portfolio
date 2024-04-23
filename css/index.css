@@ -65,7 +65,7 @@ section:not(.intro) div {
     flex-direction: column;
 }
 section:not(.intro) h2 {
-    color: var(--Blue-Dianne);
+    color: var(--color-primary);
 }
 
 section:not(.intro) p {
@@ -94,13 +94,15 @@ section:not(.intro) .button-dark {
     section:not(.intro) img {
         display: none;
     }
+
+    section:not(.intro) h2 {
+        width: 100%;
+    }
     section:not(.intro) div {
         justify-content: center;
         align-items: center;
     }
 
-    section:not(.intro) p {
-        text-align: center;
-    }
+   
     
 }

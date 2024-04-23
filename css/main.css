@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --Rhino: #364A6A;
-    --Blue-Dianne: #1C3043;
-    --Mystic: #DAE3EB;
-    --Mystic-hover: #bdc6cd;
-    --background: #3a3f42b1;
-    --Jaffa: #F27D4F;
+    --color-primary-variant: #364A6A;
+    --color-primary: #1C3043;
+    --color-ui: #DAE3EB;
+    --color-ui-hover: #bdc6cd;
+    --color-background: #3a3f42b1;
+    --color-accent: #F27D4F;
+    --color-text: black;
+    --color-text-inversed: white;
   }
 
   * {
@@ -73,13 +75,13 @@
         background-color: rgba(0, 0, 0, 0);
     }
     to {
-        background-color: var(--background);
+        background-color: var(--color-background);
     }
 }
 
 @keyframes bg-disappears {
     from {
-        background-color: var(--background);
+        background-color: var(--color-background);
     }
     to {
         
@@ -103,7 +105,7 @@ h1 {
     font-size: 70px;
     font-weight: 800;
     margin: 0;
-    color: var(--Blue-Dianne);
+    color: var(--color-primary);
 
 }
 
@@ -111,7 +113,7 @@ h2 {
     font-size: 50px;
     font-weight: 700;
     margin: 0;
-    color: var(--Blue-Dianne);
+    color: var(--color-primary);
 
 }
 
@@ -136,9 +138,9 @@ p {
 }
 
 .button-light {
-    color: var(--Blue-Dianne);
+    color: var(--color-primary);
     text-decoration: none;
-    background-color: var(--Mystic);
+    background-color: var(--color-ui);
     padding: 10px 20px;
     border-radius: 50px;
     font-weight: 500;
@@ -147,9 +149,9 @@ p {
 }
 
 .button-dark {
-    color: var(--Mystic);
+    color: var(--color-ui);
     text-decoration: none;
-    background-color: var(--Blue-Dianne);
+    background-color: var(--color-primary);
     padding: 10px 20px;
     border-radius: 50px;
     cursor: pointer;
@@ -160,20 +162,21 @@ p {
 
 .link {
     text-decoration: underline;
-    color: var(--Jaffa);
+    color: var(--color-accent);
 }
 
 .button-light:hover, .button-dark:hover {
-    background-color: var(--Jaffa);
-    color: black;
-    box-shadow: 0px 7px 0px var(--Blue-Dianne);
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    box-shadow: 0px 7px 0px var(--color-primary);
     transform: translateY(-7px);
+    transition: all .2s ease;
 }
 
 .button-light:active, .button-dark:active {
-    background-color: var(--Jaffa);
-    color: black;
-    box-shadow: 0px 0px 0px 9px var(--Blue-Dianne);
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    box-shadow: 0px 0px 0px 9px var(--color-primary);
     transform: translateY(-7px) scale(0.9);
 }
 
@@ -215,7 +218,7 @@ main {
     width: 90%;
     min-height: 100%;
     border-radius: 50px;
-    background-color: var(--Mystic);
+    background-color: var(--color-ui);
     transition: all .3s ease;
 }
 
@@ -223,21 +226,21 @@ main {
 @media (max-width: 899px) {
 
     h1 {
-        font-size: 35px;
-        font-weight: 700;
-        margin: 0;
-        color: var(--Blue-Dianne);
-    }
-
-    h2 {
         font-size: 30px;
         font-weight: 700;
         margin: 0;
-        color: var(--Blue-Dianne);
+        color: var(--color-primary);
+    }
+
+    h2 {
+        font-size: 23px;
+        font-weight: 700;
+        margin: 0;
+        color: var(--color-primary);
     }
     
     h3 {
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 500;
         margin: 0;
     }
@@ -266,7 +269,7 @@ main {
         width: 90%;
         min-height: 100%;
         border-radius: 50px;
-        background-color: var(--Mystic);
+        background-color: var(--color-ui);
         transition: all .3s ease;
     }
 
@@ -276,13 +279,13 @@ main {
     }
 
     .button-light:hover,  .button-light:active{
-        background-color: var(--Mystic);
-        color: black;
+        background-color: var(--color-ui);
+        color: var(--color-text);
     }
 
     .button-dark:hover, .button-dark:active {
-        background-color: var(--Blue-Dianne);
-        color: var(--Mystic);
+        background-color: var(--color-primary);
+        color: var(--color-ui);
     }
     
     .button-light:active, .button-dark:active {

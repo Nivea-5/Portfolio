@@ -14,12 +14,12 @@
 
 .content-component-sum:hover {
     cursor: pointer;
-    background-color: var(--Mystic-hover);
+    background-color: var(--color-ui-hover);
 }
 
 .content-component-sum:hover .tags span {
     cursor: pointer;
-    background-color: var(--Mystic);
+    background-color: var(--color-ui);
 }
 
 .content-component-sum .tags {
@@ -30,7 +30,7 @@
 }
 
 .content-component-sum .tags span {
-    background-color: var(--Mystic-hover);
+    background-color: var(--color-ui-hover);
     padding: 5px 10px;
     border-radius: 10px;
     transition: all .3s ease;
@@ -49,7 +49,7 @@
     left: 5%;
     width: calc(90% - 100px);
     height: 50%;
-    background-color: var(--Mystic);
+    background-color: var(--color-ui);
     padding: 50px;
     border-radius: 35px 35px 0 0;
     animation: zoom-from-bottom .3s ease;
@@ -91,7 +91,7 @@
     flex-wrap: wrap;
 }
 .content-component .tags span {
-    background-color: var(--Mystic-hover);
+    background-color: var(--color-ui-hover);
     padding: 5px 10px;
     border-radius: 10px;
     transition: all .3s ease;
@@ -104,7 +104,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--background);
+    background-color: var(--color-background);
 }
 
 
@@ -134,7 +134,7 @@
 }
 
 .content-component .cross:hover,  .content-component .expandBtn:hover {
-    background-color: var(--Mystic-hover);
+    background-color: var(--color-ui-hover);
 }
 
 
@@ -166,8 +166,25 @@
         padding-top: 80px;
     }
 
+    .content-component p {
+        width: 100%;
+    }
+
     .content-component .expandBtn {
         display: none;
+    }
+
+    .content-component-sum .tags {
+        display: none;
+    }
+
+    .content-component-sum {
+        margin-bottom: 30px;
+        background-color: var(--color-text-inversed);
+    }
+
+    .content-component h1 {
+        font-size: 30px;
     }
 
 }

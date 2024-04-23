@@ -9,8 +9,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--Rhino);
-    color: var(--Mystic);
+    background-color: var(--color-primary-variant);
+    color: var(--color-ui);
     border-radius: 40px;
     animation: zoom .5s ease;
 }
@@ -27,7 +27,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-color: var(--background);
+    background-color: var(--color-background);
 }
 
 .popup-bg-closing {
@@ -46,14 +46,14 @@
 }
 
 .popup .cross:hover {
-    background-color: var(--Blue-Dianne);
+    background-color: var(--color-primary);
 }
 
 
 .popup .cross span {
     width: 20px;
     height: 2px;
-    background-color: var(--Mystic);
+    background-color: var(--color-ui);
     position: absolute;
     top: calc(50% - 2px);
     left: calc(50% - 10px);
@@ -71,9 +71,9 @@
 }
 .popup .cross:hover .cross-1 {
     transform: rotate(45deg) scale(1.4);
-    background-color: var(--Jaffa);
+    background-color: var(--color-accent);
 }
 .popup .cross:hover .cross-2 {
     transform: rotate(-45deg) scale(1.4);
-    background-color: var(--Jaffa);
+    background-color: var(--color-accent);
 }
