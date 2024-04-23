@@ -1,3 +1,45 @@
-{
-    
-}
+[
+    {
+        "title" : "Programmation",
+        "tags" : ["Python", "C", "C++", "C#", "Java", "JavaFX", "Kotlin", "Applications mobile", "Assembleur"],
+        "img" : "programming.svg",
+        "description" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+        "title" : "Développement WEB",
+        "tags" : ["HTML", "CSS", "JavaScript", "Jquery", "PHP", "Node.js", "React.js", "Angular", "Symfony", "Bootstrap"],
+        "img" : "dev-web.svg",
+        "description" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+        "title" : "Gestion de base de données",
+        "tags" : ["PostgreSQL", "SQLite"],
+        "img" : "database.svg",
+        "description" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+        "title" : "Administration systèmes",
+        "tags" : ["Apache", "Serveurs linux", "Docker", "conteneurisation"],
+        "img" : "network.svg",
+        "description" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+        "title" : "Réalisation de tests",
+        "tags" : ["XUnit", "Mocha", "Cypress"],
+        "img" : "network.svg",
+        "description" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+        "title" : "Compétences transversales",
+        "tags" : ["Rigoureux", "Collaboratif", "Entrepreneur", "Autonome"],
+        "img" : "collaborating.svg",
+        "description" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+    ,
+    {
+        "title" : "Langues",
+        "tags" : ["Anglais", "Italien"],
+        "img" : "speaking.svg",
+        "description" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+]

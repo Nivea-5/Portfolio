@@ -173,8 +173,8 @@ p {
 .button-light:active, .button-dark:active {
     background-color: var(--Jaffa);
     color: black;
-    box-shadow: 0px 0px 0px 7px var(--Blue-Dianne);
-    transform: translateY(-7px);
+    box-shadow: 0px 0px 0px 9px var(--Blue-Dianne);
+    transform: translateY(-7px) scale(0.9);
 }
 
 body {

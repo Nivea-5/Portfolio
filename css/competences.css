@@ -55,6 +55,7 @@ section:not(.intro) > img {
 section:not(.intro) div {
     min-height: 100%;
     display: flex;
+    width: 60%;
     flex-direction: column;
 }
 section:not(.intro) h2 {
@@ -62,6 +63,8 @@ section:not(.intro) h2 {
 }
 
 section:not(.intro) p {
+    width: 100%;
+    word-wrap: break-word;
     margin: 5% 0;
 }
 
