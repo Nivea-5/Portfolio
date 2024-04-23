@@ -18,6 +18,7 @@ function drawSection(content) {
     
     let title = document.createElement("h2");
     title.innerText = content.title;
+    mainDiv.appendChild(title);
 
     let tags = document.createElement("div");
     tags.classList.add("tags");
@@ -26,14 +27,21 @@ function drawSection(content) {
         span.innerText = tag;
         tags.appendChild(span);
     });
-
-    let desc = document.createElement("p");
-    desc.innerText = content.description;
-
-    mainDiv.appendChild(title);
     mainDiv.appendChild(tags)
-    mainDiv.appendChild(desc);
 
+    if (typeof content.description === "object") {
+        content.description.forEach(description => {
+            let desc = document.createElement("p");
+            desc.innerHTML   = description + "<br/> <br/>";
+            mainDiv.appendChild(desc);
+        });
+    } else {
+        let desc = document.createElement("p");
+        desc.innerText = content.description;
+        mainDiv.appendChild(desc);
+    }
+    
+    
     section.appendChild(img);
     section.appendChild(mainDiv);
 
