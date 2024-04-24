@@ -39,6 +39,15 @@ class Utils {
                 })
                 document.querySelector('body').insertBefore(menuBtn, existingChild);
 
+                document.querySelector(".contact").addEventListener("mouseover", () => {
+                    console.log("test")
+                    document.querySelector("lord-icon").playerInstance.play();
+
+                })
+
+                document.querySelector("lord-icon").addEventListener("complete", () => {
+                    console.log("klsdfjlkdsjf")
+                });
             })
             .catch(error => {
                 console.error('Une erreur s\'est produite:', error);
