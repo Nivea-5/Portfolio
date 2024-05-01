@@ -25,6 +25,18 @@
     }
 }
 
+@keyframes zoom-reverse {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        
+        transform: scale(.5);
+        opacity: 0;
+    }
+}
+
 @keyframes zoom {
     from {
         transform: scale(.5);
@@ -37,6 +49,7 @@
 }
 
 @keyframes zoom-from-bottom {
+
     from {
         transform: scale(.5) translateY(500px);
         opacity: 0;
@@ -45,6 +58,7 @@
         transform: scale(1);
         opacity: 1;
     }
+
 }
 
 @keyframes zoom-from-bottom-reverse {
@@ -54,18 +68,6 @@
     }
     to {
         transform: scale(.5) translateY(500px);
-        opacity: 0;
-    }
-}
-
-@keyframes zoom-reverse {
-    from {
-        transform: scale(1);
-        opacity: 1;
-    }
-    to {
-        
-        transform: scale(.5);
         opacity: 0;
     }
 }
