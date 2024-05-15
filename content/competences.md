@@ -53,7 +53,7 @@ Enfin, lors de mon stage de fin de deuxième année, j'ai acquis des notions de 
 * SQLite
 * SQL server (MSSQL)
 
-![image](../img/dev-web.svg)
+![image](../img/database.svg)
 
 Mon initiation à ce domaine a débuté par l'apprentissage des requêtes SQL. Cela m'a permis de me familiariser avec des requêtes simples ainsi que des requêtes plus complexes, incluant des sous-requêtes, entre autres.
 
@@ -70,7 +70,7 @@ Plus généralement, dans le domaine des bases de données, j'ai perfectionné m
 * Docker
 * Conteneurisation
 
-![image](../img/dev-web.svg)
+![image](../img/network.svg)
 
 J'ai rapidement acquis les compétences pour installer Linux, notamment en ligne de commande, et configurer tous les logiciels nécessaires au développement ou au déploiement d'un serveur simple. Cela comprend Apache, PostgreSQL, PHP, ainsi que la configuration du système et du réseau.
 
@@ -84,7 +84,7 @@ Par la suite, j'ai découvert Docker, une alternative plus simple et efficace au
 * Moq
 * AutoFixture
 
-![image](../img/dev-web.svg)
+![image](../img/testing.svg)
 
 J'ai entamé mon apprentissage des tests JavaScript avec Mocha, ainsi que la génération de la couverture du code à l'aide d'outils tels qu'Istanbul. Par la suite, j'ai découvert l'utilisation de Cypress pour effectuer des tests fonctionnels sur des interfaces web, que j'ai rapidement maîtrisés.
 
@@ -97,7 +97,7 @@ Au cours de mon stage de fin de deuxième année, j'ai acquis des compétences d
 * Créatif
 * Autonome
 
-![image](../img/dev-web.svg)
+![image](../img/collaborating.svg)
 
 Mes compétences transversales principales sont la rigueur, la collaboration, la créativité et l’autonomie. Ces qualités se sont largement développées à travers mes expériences professionnelles saisonnières, caractérisées par un engagement intense malgré certaines contraintes (physiques, horaires). Avant même de suivre la formation du BUT informatique, j'ai acquis des compétences en autodidacte en apprenant à coder, notamment en suivant des cours de terminale en Numérique et Science de l’Informatique de façon indépendante.
 
@@ -114,7 +114,7 @@ Enfin, le projet de réaliser ma troisième année d’études à l’étranger,
 * Anglais
 * Italien
 
-![image](../img/dev-web.svg)
+![image](../img/speaking.svg)
 
 Au lycée, j'ai choisi de suivre en première et en terminale la spécialité LLCE (Langue, Littérature et Culture Étrangère) en anglais. Cette spécialité a grandement contribué à l'amélioration de mon niveau en anglais, me permettant d'atteindre le niveau C1 à l'oral comme à l'écrit.
 

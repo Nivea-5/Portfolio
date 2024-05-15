@@ -41,6 +41,14 @@ class Utils {
             menuBtn.classList.add("menu-down");
           }
         });
+
+        let contactBtn = document.querySelector(".contact");
+        contactBtn.addEventListener("click", () => {
+          this.drawPopUp(
+            "Contactez moi !",
+            "Mail : mael.garnier@etu.univ-grenoble-alpes.fr </br> Tel : +33 7 77 33 31 62"
+          );
+        });
         document.querySelector("body").insertBefore(menuBtn, existingChild);
       })
       .catch((error) => {
@@ -60,7 +68,7 @@ class Utils {
       });
   }
 
-  drawPopUp(title, content, onActionButton, textButton) {
+  drawPopUp(title, content) {
     fetch("../components/popup.html")
       .then((response) => response.text())
       .then((data) => {
@@ -68,10 +76,9 @@ class Utils {
         popup.classList.add("popup");
         popup.innerHTML = data;
         let closeBtn = popup.querySelector(".cross");
-        popup.querySelector("h1").innerText = title || "Default Message";
-        popup.querySelector("p").innerText =
+        popup.querySelector("h2").innerText = title || "Default Message";
+        popup.querySelector("p").innerHTML =
           content || "You're seeing the default message for a popup window";
-        popup.querySelector("a").innerText = textButton || "Contact support";
 
         document.querySelector("body").appendChild(popup);
 

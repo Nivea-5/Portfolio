@@ -1,18 +1,34 @@
 .popup .content {
     position: fixed;
-    top: 25%;
+    top: 12%;
     width: 50%;
-    height: 50%;
+    height: fit-content;
+    max-height: 85%;
     min-height:250px;
     left: 25%;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     background-color: var(--color-primary-variant);
     color: var(--color-ui);
     border-radius: 40px;
     animation: zoom .5s ease;
+    overflow: hidden;
+}
+
+.popup h2 {
+    color: var(--color-ui);
+    margin-top: 10%;
+}
+
+.popup p {
+    color: var(--color-ui);
+    background-color: var(--color-primary);
+    margin: 5% 0;
+    padding: 5%;
+    font-size: 18px;
+    border-radius: 30px;
+    text-align: center;
 }
 
 .popup .content-closing {
@@ -37,6 +53,9 @@
 
 .popup .cross {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: 15px;
     top: 15px;
     height: 50px;
@@ -45,35 +64,11 @@
     transition: all .3s ease;
 }
 
+.popup .cross lord-icon {
+    width: 40px;
+    height: 40px;
+}
+
 .popup .cross:hover {
     background-color: var(--color-primary);
-}
-
-
-.popup .cross span {
-    width: 20px;
-    height: 2px;
-    background-color: var(--color-ui);
-    position: absolute;
-    top: calc(50% - 2px);
-    left: calc(50% - 10px);
-    border-radius: 5px;
-}
-
-.popup .cross-1 {
-    transform: rotate(45deg);
-    transition: all .3s ease;
-}
-
-.popup .cross-2 {
-    transform: rotate(-45deg);
-    transition: all .3s ease;
-}
-.popup .cross:hover .cross-1 {
-    transform: rotate(45deg) scale(1.4);
-    background-color: var(--color-accent);
-}
-.popup .cross:hover .cross-2 {
-    transform: rotate(-45deg) scale(1.4);
-    background-color: var(--color-accent);
 }
