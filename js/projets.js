@@ -15,7 +15,7 @@ function drawContentSummary(content, onClickAction) {
       contentElem.classList.add("content-component-sum");
       contentElem.querySelector("h2").innerText = content.title || "Titre";
       contentElem.querySelector("p").innerText =
-        content.text ||
+        content.summary ||
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.";
       content.tags.forEach((tag) => {
         let tagElem = document.createElement("span");
@@ -118,10 +118,11 @@ function drawContent(content) {
   document.querySelector(".container").classList.add("smaller");
 }
 
-utils.getContent("projets").then((data) => {
-  data = JSON.parse(data);
+utils.getContent("projets.md").then((data) => {
+  data = utils.parseMarkdown(data);
+
 
   data.forEach((element) => {
-    drawContentSummary(element.summary, () => drawContent(element.all));
+    drawContentSummary(element, () => drawContent(element));
   });
 });

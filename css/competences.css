@@ -43,11 +43,13 @@ section:not(.intro) {
     display: flex;
     padding: 7% 0;
     justify-content: center;
+    align-items: start;
     gap: 100px;
 }
 
 section:not(.intro) > img {
     width: 30%;
+    margin-top: 5%;
     object-fit: contain;
 }
 
