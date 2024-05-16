@@ -173,15 +173,10 @@ p {
     color: var(--color-text);
     box-shadow: 0px 7px 0px var(--color-primary);
     transform: translateY(-7px);
-    transition: all .2s ease;
+    
 }
 
-.button-light:active, .button-dark:active {
-    background-color: var(--color-accent);
-    color: var(--color-text);
-    box-shadow: 0px 0px 0px 9px var(--color-primary);
-    transform: translateY(-7px) scale(0.9);
-}
+
 
 body {
     background-image: url(../img/moutains.jpg);
@@ -290,9 +285,10 @@ main {
         background-color: var(--color-primary);
         color: var(--color-ui);
     }
-    
+
     .button-light:active, .button-dark:active {
-        box-shadow: none;
-        transform: none;
+
+        transform: scale(.7);
+        transition: all .2s ease;
     }
 }

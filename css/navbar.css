@@ -119,6 +119,10 @@ nav ul li a:hover::after {
         transition: all .3s ease;
     }
 
+    .menu:active{
+        transform: scale(.7);
+    }
+
     .menu span {
         display: block;
         position: absolute;
@@ -208,6 +212,10 @@ nav ul li a:hover::after {
     nav ul li {
         width: 100%;
 
+    }
+
+    nav ul li a:active {
+        transform:  scale(.7);
     }
     
     nav ul li a {

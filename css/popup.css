@@ -9,21 +9,21 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--color-primary-variant);
-    color: var(--color-ui);
+    background-color: var(--color-ui);
+    color: var(--color-text);
     border-radius: 40px;
     animation: zoom .5s ease;
     overflow: hidden;
 }
 
 .popup h2 {
-    color: var(--color-ui);
+    color: var(--color-text);
     margin-top: 10%;
 }
 
 .popup p {
-    color: var(--color-ui);
-    background-color: var(--color-primary);
+    color: var(---color-text);
+    background-color: var(--color-ui-hover);
     margin: 5% 0;
     padding: 5%;
     font-size: 18px;
@@ -70,5 +70,5 @@
 }
 
 .popup .cross:hover {
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
 }
