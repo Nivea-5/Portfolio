@@ -1,110 +1,33 @@
-class Utils {
-  drawNavBar(selectedId) {
-    fetch("../components/navbar.html")
-      .then((response) => response.text())
-      .then((data) => {
-        // Insère le contenu dans le conteneur de la navbar
-        let existingChild = document.querySelector("body").firstChild;
-        let header = document.createElement("header");
-        header.innerHTML = data;
-        document.querySelector("body").insertBefore(header, existingChild);
-        document
-          .getElementById(selectedId || "accueil")
-          .classList.add("selected");
+ export default class Utils {
 
-        let menuBtn = document.createElement("div");
-        menuBtn.classList.add("menu");
-        let menuSpan1 = document.createElement("span");
-        let menuSpan2 = document.createElement("span");
-        let menuSpan3 = document.createElement("span");
-
-        menuBtn.appendChild(menuSpan1);
-        menuBtn.appendChild(menuSpan2);
-        menuBtn.appendChild(menuSpan3);
-
-        menuBtn.addEventListener("click", () => {
-          if (
-            document.querySelector("header").classList.contains("header-down")
-          ) {
-            document.querySelector("header").classList.remove("header-down");
-            document.querySelector("body").classList.remove("background-moved");
-            document
-              .querySelector(".container")
-              .classList.remove("container-hide");
-            menuBtn.classList.remove("menu-down");
-          } else {
-            document.querySelector("header").classList.add("header-down");
-            document.querySelector("body").classList.add("background-moved");
-            document
-              .querySelector(".container")
-              .classList.add("container-hide");
-            menuBtn.classList.add("menu-down");
-          }
-        });
-
-        let contactBtn = document.querySelector(".contact");
-        contactBtn.addEventListener("click", () => {
-          this.drawPopUp(
-            "Contactez moi !",
-            "Mail : mael.garnier@etu.univ-grenoble-alpes.fr </br> Tel : +33 7 77 33 31 62"
-          );
-        });
-        document.querySelector("body").insertBefore(menuBtn, existingChild);
-      })
-      .catch((error) => {
-        console.error("Une erreur s'est produite:", error);
-      });
+  /**
+   * Permets de récuperer le contenu d'un fichier du dossier "content"
+   * @param {*} pageName le nom (avec l'extention) du fichier
+   * @returns 
+   */
+  static async getContent(pageName) {
+    try {
+      const response = await fetch("../content/" + pageName);
+      const data = await response.text();
+      return data;
+    } catch (error) {
+      console.error("Une erreur s'est produite:", error);
+    }
   }
 
-  drawFooter() {
-    fetch("../components/footer.html")
-      .then((response) => response.text())
-      .then((data) => {
-        // Insère le contenu dans le conteneur de la navbar
-        document.querySelector("footer").innerHTML = data;
-      })
-      .catch((error) => {
-        console.error("Une erreur s'est produite:", error);
-      });
-  }
-
-  drawPopUp(title, content) {
-    fetch("../components/popup.html")
-      .then((response) => response.text())
-      .then((data) => {
-        let popup = document.createElement("div");
-        popup.classList.add("popup");
-        popup.innerHTML = data;
-        let closeBtn = popup.querySelector(".cross");
-        popup.querySelector("h2").innerText = title || "Default Message";
-        popup.querySelector("p").innerHTML =
-          content || "You're seeing the default message for a popup window";
-
-        document.querySelector("body").appendChild(popup);
-
-        closeBtn.addEventListener("click", () => {
-          popup.querySelector(".content").classList.add("content-closing");
-          popup.querySelector(".popup-bg").classList.add("popup-bg-closing");
-          setTimeout(
-            () => document.querySelector("body").removeChild(popup),
-            450
-          );
-        });
-      })
-      .catch((error) => {
-        console.error("Une erreur s'est produite:", error);
-      });
-  }
-
-  getContent(pageName) {
-    return fetch("../content/" + pageName)
-      .then((response) => response.text())
-      .then((data) => {
-        return data;
-      })
-      .catch((error) => {
-        console.error("Une erreur s'est produite:", error);
-      });
+  /**
+   * Meme principe que getContent, mais pour les composants
+   * @param {*} componentName 
+   * @returns 
+   */
+  static async getComponent(componentName) {
+    try {
+      const response = await fetch("../components/" + componentName);
+      const data = await response.text();
+      return data;
+    } catch (error) {
+      console.error("Une erreur s'est produite:", error);
+    }
   }
 
   /**
@@ -119,17 +42,66 @@ class Utils {
   }
 
   /**
-   * permet de faire une animation pour afficher un element à l'ecran, selon si il est censé etre affiché
-   * Pour cela, ajoute la classe visible quand necessaire
-   * @param {*} element
-   */
-  appearsOnScroll(element) {
+       * permet de faire une animation pour afficher un element à l'ecran, selon si il est censé etre affiché
+       * Pour cela, ajoute la classe visible quand necessaire
+       * @param {*} element
+       */
+  static appearsOnScroll(element) {
     if (this.isOnScreen(element) && !element.classList.contains("visible")) {
       element.classList.add("visible");
     }
   }
 
-  parseMarkdown(markdown) {
+  /**
+   * Permets de rechercher dans tous les documents contenus dans content/ un certain nombre de mots
+   * @param {*} input une liste de mots a rechercher
+   * @returns une liste de resultat, ou result.page correspond a la page, et result.elem correspond à l'element de resultat parsé de md à json
+   */
+  static search(input) {
+    const result = []
+    const pages = ["competences", "experiences", "projets"];
+    pages.forEach(page => {
+      this.getContent(page+".md").then((data)=>{
+        data = this.parseMarkdown(data);
+        data.forEach(element => {
+          let containsInput = false;
+          input.forEach(inputItem => {
+            if (element.title.toLowerCase().includes(inputItem) || (element.summary && element.summary.toLowerCase().includes(inputItem))){
+              containsInput = true;
+            } else {
+              element.tags.forEach(tag => {
+                if (tag.toLowerCase().includes(inputItem)) {
+                  containsInput = true;
+                }
+              });
+              if (!containsInput) {
+                element.content.forEach(content => {
+                  if (content.type == "text" && content.data.toLowerCase().includes(inputItem)){
+                    containsInput = true;
+                  }
+                });
+              }
+            }
+          });
+
+          if (containsInput) {
+            result.push({
+              page: page,
+              elem: element
+            })
+          }
+        });
+      })
+    });
+    return result;
+}
+
+  /**
+   * Pemrets de convertir un fichier markdown au format json
+   * @param {*} markdown 
+   * @returns 
+   */
+  static parseMarkdown(markdown) {
     const lines = markdown.split("\n");
     const sections = [];
     let currentSection = null;
@@ -199,4 +171,3 @@ class Utils {
   }
 }
 
-export default Utils;

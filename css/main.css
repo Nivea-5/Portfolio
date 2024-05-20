@@ -5,7 +5,7 @@
     --color-primary: #1C3043;
     --color-ui: #DAE3EB;
     --color-ui-hover: #bdc6cd;
-    --color-background: #3a3f42b1;
+    --color-background: #000000cf;
     --color-accent: #F27D4F;
     --color-text: black;
     --color-text-inversed: white;
@@ -76,19 +76,27 @@
 @keyframes bg-appears {
     from {
         background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+
     }
     to {
         background-color: var(--color-background);
+        backdrop-filter: blur(10px);
+
     }
 }
 
 @keyframes bg-disappears {
     from {
         background-color: var(--color-background);
+        backdrop-filter: blur(10px);
+
     }
     to {
         
         background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+
     }
 }
 
@@ -219,6 +227,8 @@ main {
     background-color: var(--color-ui);
     transition: all .3s ease;
 }
+
+
 
 
 @media (max-width: 899px) {

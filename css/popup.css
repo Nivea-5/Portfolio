@@ -43,6 +43,8 @@
     position: absolute;
     left: 0;
     top: 0;
+    backdrop-filter: blur(10px);
+
     background-color: var(--color-background);
 }
 
