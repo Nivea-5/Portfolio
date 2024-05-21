@@ -109,7 +109,7 @@ export default class Creator {
             } else {
               div.querySelector(".search-result").innerHTML = "";
               for (const element of result) {
-                designer.drawContentSummary(element.elem,() => window.open('/'+element.page+'.html#'+element.elem.title, '_blank'),  ".search-result")
+                designer.drawContentSummary(element.elem,() => designer.drawContent(element.elem),  ".search-result")
               }
             }
           });
