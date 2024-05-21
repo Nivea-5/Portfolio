@@ -169,11 +169,11 @@
 
     .content-component {
         position: absolute;
-        top: calc(40% - 130px);
+        top: calc(30% - 100px);
         left: 0%;
-        width: calc(100% - 100px);
-        height: 60%;
-        padding-top: 80px;
+        width: calc(100% - 40px);
+        height: 70%;
+        padding: 80px 20px 20px 20px;
     }
 
     .content-component-sum {
