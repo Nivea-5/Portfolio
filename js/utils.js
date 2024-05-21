@@ -35,7 +35,7 @@
    * @param {*} element
    * @returns un boulean indiquand si l'element est affiché
    */
-  isOnScreen(element) {
+  static isOnScreen(element) {
     const rect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight;
     return rect.bottom <= windowHeight + rect.height - 200;
@@ -57,11 +57,11 @@
    * @param {*} input une liste de mots a rechercher
    * @returns une liste de resultat, ou result.page correspond a la page, et result.elem correspond à l'element de resultat parsé de md à json
    */
-  static search(input) {
+  static async search(input) {
     const result = []
     const pages = ["competences", "experiences", "projets"];
-    pages.forEach(page => {
-      this.getContent(page+".md").then((data)=>{
+    for (const page of pages) {
+      let data = await this.getContent(page+".md")
         data = this.parseMarkdown(data);
         data.forEach(element => {
           let containsInput = false;
@@ -91,8 +91,7 @@
             })
           }
         });
-      })
-    });
+      }
     return result;
 }
 

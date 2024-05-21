@@ -6,7 +6,7 @@
     height: 45px;
     transition: all .3s ease;
     animation: from-top .5s ease;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .search-bg {
@@ -100,14 +100,28 @@
 
 .search-expand .search-result {
     position: absolute;
-    width: 50%;
+    width: 80%;
     height: fit-content;
     max-height: calc(80% - 100px);
     overflow-y: auto;
-    left: 25%;
+    left: 10%;
     top: calc(10% + 100px);
     background-color: var(--color-ui);
     border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-expand .search-result > h2 {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    padding: 20px;
+}
+
+.search-expand .search-result > div {
+    margin-top: 2%;
 }
 
 .search-expand .search-box {
@@ -163,4 +177,87 @@
 .search-expand .close-search lord-icon {
     width: 50px;
     height: 50px;
+}
+
+@media (max-width: 899px) {
+
+    .search {
+        top: 25px;
+        left: 25px;
+        width: 50px;
+        height: 50px;
+
+    }
+    .search-box {
+
+        height: 50px;
+        width: 50px;
+
+    }
+
+    .search-box a {
+        display: none;
+    
+    }
+
+    .search-box lord-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .search-expand {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .search-expand .search-box lord-icon {
+        display: none;
+    }
+    .search-expand .search-box {
+        width: calc(90% - 60px) ;
+        height: 50px;
+        left: 5%;
+        top: 10%;
+    }
+
+    .search-expand .close-search {
+        visibility: visible;
+        display: flex;
+        right: 5%;
+        height: 50px;
+        width: 50px;
+        background-color: var(--color-ui);
+        transition: all .3s ease;
+        border-radius: 50px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .search-box input {
+
+        width: 90% ;
+    }
+
+    .search-expand .search-result {
+
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        border-radius: 50px 50px 0px 0px;
+        max-height: calc(80% - 50px);
+
+    }
+
+    .search-expand .search-result > div:first-child {
+        margin-top: 50px;
+
+    }
+
+    .search-expand .search-result > div {
+        width: 70%;
+    }
 }

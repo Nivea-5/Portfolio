@@ -28,7 +28,7 @@ export default class Creator {
 
   }
 
-  static createMenuBtn() {
+  static createMenuBtn(header) {
     let menuBtn = document.createElement("div");
     menuBtn.classList.add("menu");
     let menuSpan1 = document.createElement("span");
@@ -85,27 +85,32 @@ export default class Creator {
 
         div.querySelector(".search-bg").addEventListener("click", () => {
           div.classList.remove("search-expand");
+          div.querySelector(".search-result").innerHTML = "";
         });
 
         div.querySelector(".close-search").addEventListener("click", () => {
           div.classList.remove("search-expand");
             div.querySelector(".search-result").innerHTML = "";
+            
         });
 
         div
           .querySelector(".search-box input")
-          .addEventListener("keyup", (e) => {
+          .addEventListener("keyup", async (e) => {
             let search = e.target.value.toLowerCase();
             search = search.split(" ");
-            let result = Utils.search(search);
-            console.log("Recherche : " + search + " Resultats : " + result)
-            if (result.length == 0) {
+            let result = await Utils.search(search);
+            console.log(e.target.value.length);
+            if (e.target.value.length <= 1) {
+              div.querySelector(".search-result").innerHTML = "";
+            } else if (result.length == 0) {
                 div.querySelector(".search-result").innerHTML =
                 "<h2>Aucun élèment de correspond à votre recherche</h2>";
             } else {
-              result.forEach((element) => {
-                designer.drawContentSummary(element, ".search-result")
-              });
+              div.querySelector(".search-result").innerHTML = "";
+              for (const element of result) {
+                designer.drawContentSummary(element.elem,() => window.open('/'+element.page+'.html#'+element.elem.title, '_blank'),  ".search-result")
+              }
             }
           });
 

@@ -3,7 +3,7 @@ import Creator from "./creator.js";
 export default class designer {
   static async drawNavBar(selectedId, parent = "body") {
     let navbar = await Creator.createNavbar(selectedId);
-    let menuBtn = Creator.createMenuBtn();
+    let menuBtn = Creator.createMenuBtn(navbar);
     let searchBtn = await Creator.createSearch();
     let firstChild = document.querySelector("body").firstChild
     document

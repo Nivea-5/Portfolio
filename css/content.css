@@ -59,6 +59,7 @@
     gap: 30px;
     overflow-y: auto;
     transition: all .3s ease;
+    z-index: 500;
 }
 
 .content-component-closing {
@@ -107,6 +108,7 @@
     height: 100%;
     backdrop-filter: blur(10px);
     background-color: var(--color-background);
+    z-index: 500;
 }
 
 

@@ -1,11 +1,11 @@
+import designer from "./designer.js";
 import Utils from "./utils.js";
 
-const utils = new Utils();
 
 let appearsOnScrollElements = document.querySelectorAll(".appearsOnScroll");
 
-utils.drawNavBar("competences");
-utils.drawFooter();
+designer.drawNavBar("competences");
+designer.drawFooter();
 
 function drawSection(content) {
   let section = document.createElement("section");
@@ -40,9 +40,8 @@ function drawSection(content) {
   document.querySelector("main").appendChild(section);
 }
 
-utils.getContent("competences.md").then((data) => {
-  //data = JSON.parse(data);
-  data = utils.parseMarkdown(data);
+Utils.getContent("competences.md").then((data) => {
+  data = Utils.parseMarkdown(data);
 
   data.forEach((section) => {
     drawSection(section);
@@ -53,6 +52,6 @@ utils.getContent("competences.md").then((data) => {
 
 document.querySelector(".container").addEventListener("scroll", () => {
   appearsOnScrollElements.forEach((element) => {
-    utils.appearsOnScroll(element);
+    Utils.appearsOnScroll(element);
   });
 });
