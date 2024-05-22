@@ -2,6 +2,9 @@
 
 * C#
 * .NET
+* Cypress
+* Angular
+* Sérialisation et désérialisation de données hexadécimal
 * Tests
 * Tests unitaires
 * Tests d'intégration
@@ -9,4 +12,6 @@
 * Travail en équipe
 * Experience professionelle
 
-Ce texte est facultatif, il vise à montrer ce que m’as apporté le stage
+Le stage est toujours en cours. Revenez ici plus tard pour en découvrir plus.
+
+![image](../img/alpilink.png)
