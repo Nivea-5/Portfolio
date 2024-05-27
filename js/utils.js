@@ -7,7 +7,7 @@
    */
   static async getContent(pageName) {
     try {
-      const response = await fetch("../content/" + pageName);
+      const response = await fetch("/Portfolio/Content/" + pageName);
       const data = await response.text();
       return data;
     } catch (error) {
@@ -22,7 +22,7 @@
    */
   static async getComponent(componentName) {
     try {
-      const response = await fetch("../components/" + componentName);
+      const response = await fetch("/Portfolio/Components/" + componentName);
       const data = await response.text();
       return data;
     } catch (error) {

@@ -6,7 +6,6 @@
     --color-ui: #DAE3EB;
     --color-ui-hover: #bdc6cd;
     --color-background: #000000cf;
-    --color-accent: #F27D4F;
     --color-text: black;
     --color-text-inversed: white;
   }
@@ -173,11 +172,11 @@ p {
 
 .link {
     text-decoration: underline;
-    color: var(--color-accent);
+    color: var(--color-primary-variant);
 }
 
 .button-light:hover, .button-dark:hover {
-    background-color: var(--color-accent);
+    background-color: var(--color-ui-hover);
     color: var(--color-text);
     box-shadow: 0px 7px 0px var(--color-primary);
     transform: translateY(-7px);

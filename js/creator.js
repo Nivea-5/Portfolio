@@ -148,9 +148,11 @@ export default class Creator {
 
         contentElem.classList.add("content-component-sum");
         contentElem.querySelector("h2").innerText = content.title || "Titre";
-        contentElem.querySelector("p").innerText =
-          content.summary ||
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.";
+        let summary = content.summary || content.content[0].data;
+        if (summary.length > 100) {
+          summary = summary.substring(0, 100) + "...";
+        }
+        contentElem.querySelector("p").innerText = summary;
         content.tags.forEach((tag) => {
           let tagElem = document.createElement("span");
           tagElem.innerText = tag;

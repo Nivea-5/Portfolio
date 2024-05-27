@@ -8,8 +8,6 @@
 * Résolution de problème
 * Travail en équipe
 
-*resumé*
-
 Ce projet, réalisé en groupe de six personnes, a marqué la fin de ma deuxième année de BUT (2023/24). Il consistait initialement à prendre en main un back office Symfony, une base de données PostgreSQL, ainsi qu'une application mobile permettant aux étudiants du BUT de trouver facilement un stage, et aux administrateurs et entreprises d'ajouter et de gérer facilement de nouvelles offres. Ces applications présentaient de nombreuses erreurs, qu'elles soient fonctionnelles, liées à la sécurité, visuelles, ou d'ergonomie, entre autres. Nous avons donc dû procéder à une analyse approfondie afin d'identifier les problèmes et les erreurs existants, de déterminer leur ordre de priorité et la manière de les résoudre. Nous avons suivi plusieurs phases de gestion de projet pour cela.
 
 ![image](../img/dev-web.svg)

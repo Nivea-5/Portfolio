@@ -80,7 +80,7 @@ nav ul li .selected::after, nav ul li a:hover::after {
 }
 
 nav ul li a:hover::after {
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
 }
 
 
