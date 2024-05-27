@@ -9,16 +9,46 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 footer .buttons {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: start;
+    justify-content: left;
     gap: 20px;
+    width: 100%;
+    background-color: aqua;
 }
 
+footer .buttons img {
+    width: 75px;
+    height: 75px;
+}
+footer .buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-height: 50px;
+    border-radius: 50px;
+    background-color: var(--color-ui);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
 
+footer .to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    float: right;
+}
 footer p {
     margin: 0;
 }
