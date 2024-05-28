@@ -6,13 +6,11 @@
    * @returns 
    */
   static async getContent(pageName) {
-    try {
-      const response = await fetch("/Portfolio/Content/" + pageName);
-      const data = await response.text();
-      return data;
-    } catch (error) {
-      console.error("Une erreur s'est produite:", error);
+    let data = await this.get("/content/" + pageName);
+    if (data == null) {
+      data = await this.get("/portfolio/content/" + pageName);
     }
+    return data;
   }
 
   /**
@@ -21,12 +19,21 @@
    * @returns 
    */
   static async getComponent(componentName) {
+    let data = await this.get("/components/" + componentName);
+    if (data == null) {
+      data = await this.get("portfolio/components/" + componentName);
+    }
+    return data;
+  }
+
+  static async get(url) {
     try {
-      const response = await fetch("/Portfolio/Components/" + componentName);
+      const response = await fetch(url);
       const data = await response.text();
       return data;
     } catch (error) {
       console.error("Une erreur s'est produite:", error);
+      return null;
     }
   }
 
