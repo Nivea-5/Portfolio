@@ -81,29 +81,28 @@
         } else {
 
           element.tags.forEach(tag => {
-            if (tag.toLowerCase().includes(inputItem)) {
+            if (tag.toLowerCase().includes(input)) {
               containsInput = true;
             }
           });
 
           if (!containsInput) {
             element.content.forEach(content => {
-              if (content.type == "text" && content.data.toLowerCase().includes(inputItem)){
+              if (content.type == "text" && content.data.toLowerCase().includes(input)){
                 containsInput = true;
               }
             });
           }
         }
-          
+        if (containsInput) {
+          result.push({
+            page: page,
+            elem: element
+          })
+        }
       });
-
-      if (containsInput) {
-        result.push({
-          page: page,
-          elem: element
-        })
-      }
     }
+      
     return result;
   }
 
