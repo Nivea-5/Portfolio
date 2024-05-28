@@ -125,7 +125,6 @@ export default class Creator {
           .querySelector(".search-box input")
           .addEventListener("keyup", async (e) => {
             let search = e.target.value.toLowerCase();
-            search = search.split(" ");
             let result = await Utils.search(search);
             console.log(e.target.value.length);
             if (e.target.value.length <= 1) {

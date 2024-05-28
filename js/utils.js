@@ -69,38 +69,43 @@
     const pages = ["competences", "experiences", "projets"];
     for (const page of pages) {
       let data = await this.getContent(page+".md")
-        data = this.parseMarkdown(data);
-        data.forEach(element => {
-          let containsInput = false;
-          input.forEach(inputItem => {
-            if (element.title.toLowerCase().includes(inputItem) || (element.summary && element.summary.toLowerCase().includes(inputItem))){
+      data = this.parseMarkdown(data);
+
+      data.forEach(element => {
+
+        let containsInput = false;
+        
+        if (element.title.toLowerCase().includes(input) || (element.summary && element.summary.toLowerCase().includes(input))){
+          containsInput = true;
+
+        } else {
+
+          element.tags.forEach(tag => {
+            if (tag.toLowerCase().includes(inputItem)) {
               containsInput = true;
-            } else {
-              element.tags.forEach(tag => {
-                if (tag.toLowerCase().includes(inputItem)) {
-                  containsInput = true;
-                }
-              });
-              if (!containsInput) {
-                element.content.forEach(content => {
-                  if (content.type == "text" && content.data.toLowerCase().includes(inputItem)){
-                    containsInput = true;
-                  }
-                });
-              }
             }
           });
 
-          if (containsInput) {
-            result.push({
-              page: page,
-              elem: element
-            })
+          if (!containsInput) {
+            element.content.forEach(content => {
+              if (content.type == "text" && content.data.toLowerCase().includes(inputItem)){
+                containsInput = true;
+              }
+            });
           }
-        });
+        }
+          
+      });
+
+      if (containsInput) {
+        result.push({
+          page: page,
+          elem: element
+        })
       }
+    }
     return result;
-}
+  }
 
   /**
    * Pemrets de convertir un fichier markdown au format json
