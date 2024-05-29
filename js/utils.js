@@ -1,3 +1,5 @@
+import designer from "./designer.js";
+
  export default class Utils {
 
   /**
