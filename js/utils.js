@@ -32,7 +32,10 @@
       const data = await response.text();
       return data;
     } catch (error) {
-      console.error("Une erreur s'est produite:", error);
+      designer.drawPopUp(
+        "Erreur",
+        "Impossible de charger le contenu : "+url+", veuillez réessayer plus tard."
+      );
       return null;
     }
   }
