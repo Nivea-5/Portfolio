@@ -10,11 +10,16 @@
 
 Ce projet, réalisé en groupe de six personnes, a marqué la fin de ma deuxième année de BUT (2023/24). Il consistait initialement à prendre en main un back office Symfony, une base de données PostgreSQL, ainsi qu'une application mobile permettant aux étudiants du BUT de trouver facilement un stage, et aux administrateurs et entreprises d'ajouter et de gérer facilement de nouvelles offres. Ces applications présentaient de nombreuses erreurs, qu'elles soient fonctionnelles, liées à la sécurité, visuelles, ou d'ergonomie, entre autres. Nous avons donc dû procéder à une analyse approfondie afin d'identifier les problèmes et les erreurs existants, de déterminer leur ordre de priorité et la manière de les résoudre. Nous avons suivi plusieurs phases de gestion de projet pour cela.
 
-![image](../img/dev-web.svg)
+Back-office web
+![image](../img/stage-rapido-screen-web.png)
+
+Application mobile
+![image](../img/stage-rapido-screen-mobile.png)
 
 Ensuite, nous avons réparti les tâches à accomplir entre les différents membres du groupe, puis avons corrigé autant de problèmes que possible dans le temps imparti. Ce projet universitaire s'est conclu par une soutenance devant un jury, au cours de laquelle nous avons pu présenter notre manière de travailler ainsi que nos réalisations.
 
-![image](../img/dev-web.svg)
+Problèmes résolus
+![image](../img/stage-rapido-chart.png)
 
 # Hello World!
 
@@ -29,6 +34,8 @@ Ensuite, nous avons réparti les tâches à accomplir entre les différents memb
 Ce projet, mené par un groupe de six personnes, avait pour objectif de créer une application web et une API permettant aux élèves de collège ou de lycée de s'entraîner dans une matière spécifique. Nous avions la liberté de choisir le niveau, le sujet et le langage de développement de notre application. Ayant reçu la recommandation de travailler avec React.js par un développeur que je connaissais, j'ai convaincu l'équipe d'opter pour ce framework, malgré notre manque d'expérience à son égard.
 
 Nous avons rapidement su nous adapter, en passant par toutes les étapes de la gestion de projet et de spécification en équipe avant de commencer le développement. Dans les délais impartis, nous avons pu livrer une application fonctionnelle ciblant les élèves de terminale en classe de NSI. En plus de proposer une gestion sécurisée des comptes administrateurs et élèves, avec des fonctionnalités supplémentaires pour les administrateurs, nous avons réussi à intégrer plusieurs mini-jeux éducatifs.
+
+![image](../img/screen-hello-world.png)
 
 Le premier, "Squisine Lite", permet à l'élève d'assembler visuellement des blocs pour réaliser des recettes de cuisine, dans le but de préparer un plat. Il peut jouer en solo ou en multijoueur tour par tour en coopération. 
 
@@ -89,6 +96,8 @@ Dans un premier temps, nous avons entrepris des recherches sur l'entreprise qui 
 Une fois cette étape achevée, nous avons élaboré le wireframe de notre site en prenant en compte les besoins précédemment établis.
 
 Ensuite, nous sommes passés au développement en utilisant les langages HTML et CSS.
+
+![image](../img/screen-cgi.png)
 
 Ce projet m'a permis d'apprendre à rechercher et à partager des informations sur internet en vue d'une mise en commun avec une équipe. Une partie significative du travail a également consisté à vulgariser ces informations afin de les rendre accessibles aux élèves de troisième.
 
