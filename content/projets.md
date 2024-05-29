@@ -31,6 +31,8 @@ Problèmes résolus
 * SQLite
 * Travail en équipe
 
+<a href="https://helloworld.mael-garnier.fr">Voir le projet</a>
+
 Ce projet, mené par un groupe de six personnes, avait pour objectif de créer une application web et une API permettant aux élèves de collège ou de lycée de s'entraîner dans une matière spécifique. Nous avions la liberté de choisir le niveau, le sujet et le langage de développement de notre application. Ayant reçu la recommandation de travailler avec React.js par un développeur que je connaissais, j'ai convaincu l'équipe d'opter pour ce framework, malgré notre manque d'expérience à son égard.
 
 Nous avons rapidement su nous adapter, en passant par toutes les étapes de la gestion de projet et de spécification en équipe avant de commencer le développement. Dans les délais impartis, nous avons pu livrer une application fonctionnelle ciblant les élèves de terminale en classe de NSI. En plus de proposer une gestion sécurisée des comptes administrateurs et élèves, avec des fonctionnalités supplémentaires pour les administrateurs, nous avons réussi à intégrer plusieurs mini-jeux éducatifs.
@@ -88,6 +90,8 @@ Ce travail d'équipe m'a non seulement permis de maîtriser l'utilisation d'outi
 * CSS
 * Recherche d'information
 * Création d'un site web
+
+<a href="https://learnaboutcgi.mael-garnier.fr">Voir le projet</a>
 
 Le projet, réalisé en trinôme, avait pour objectif de créer un site web permettant à un élève de troisième à la recherche d'un stage de consulter facilement des informations vulgarisées sur une entreprise du secteur du numérique, notamment une ESN (Entreprise de Services du Numérique).
 
