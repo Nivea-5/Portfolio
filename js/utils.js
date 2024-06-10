@@ -1,3 +1,5 @@
+import designer from "./designer.js";
+
  export default class Utils {
 
   /**
@@ -6,13 +8,11 @@
    * @returns 
    */
   static async getContent(pageName) {
-    try {
-      const response = await fetch("../content/" + pageName);
-      const data = await response.text();
-      return data;
-    } catch (error) {
-      console.error("Une erreur s'est produite:", error);
+    let data = await this.get("/content/" + pageName);
+    if (data == null) {
+      data = await this.get("/portfolio/content/" + pageName);
     }
+    return data;
   }
 
   /**
@@ -21,12 +21,24 @@
    * @returns 
    */
   static async getComponent(componentName) {
+    let data = await this.get("/components/" + componentName);
+    if (data == null) {
+      data = await this.get("portfolio/components/" + componentName);
+    }
+    return data;
+  }
+
+  static async get(url) {
     try {
-      const response = await fetch("../components/" + componentName);
+      const response = await fetch(url);
       const data = await response.text();
       return data;
     } catch (error) {
-      console.error("Une erreur s'est produite:", error);
+      designer.drawPopUp(
+        "Erreur",
+        "Impossible de charger le contenu : "+url+", veuillez réessayer plus tard."
+      );
+      return null;
     }
   }
 
@@ -73,38 +85,42 @@
     const pages = ["competences", "experiences", "projets"];
     for (const page of pages) {
       let data = await this.getContent(page+".md")
-        data = this.parseMarkdown(data);
-        data.forEach(element => {
-          let containsInput = false;
-          input.forEach(inputItem => {
-            if (element.title.toLowerCase().includes(inputItem) || (element.summary && element.summary.toLowerCase().includes(inputItem))){
+      data = this.parseMarkdown(data);
+
+      data.forEach(element => {
+
+        let containsInput = false;
+        
+        if (element.title.toLowerCase().includes(input) || (element.summary && element.summary.toLowerCase().includes(input))){
+          containsInput = true;
+
+        } else {
+
+          element.tags.forEach(tag => {
+            if (tag.toLowerCase().includes(input)) {
               containsInput = true;
-            } else {
-              element.tags.forEach(tag => {
-                if (tag.toLowerCase().includes(inputItem)) {
-                  containsInput = true;
-                }
-              });
-              if (!containsInput) {
-                element.content.forEach(content => {
-                  if (content.type == "text" && content.data.toLowerCase().includes(inputItem)){
-                    containsInput = true;
-                  }
-                });
-              }
             }
           });
 
-          if (containsInput) {
-            result.push({
-              page: page,
-              elem: element
-            })
+          if (!containsInput) {
+            element.content.forEach(content => {
+              if (content.type == "text" && content.data.toLowerCase().includes(input)){
+                containsInput = true;
+              }
+            });
           }
-        });
-      }
+        }
+        if (containsInput) {
+          result.push({
+            page: page,
+            elem: element
+          })
+        }
+      });
+    }
+      
     return result;
-}
+  }
 
   /**
    * Pemrets de convertir un fichier markdown au format json

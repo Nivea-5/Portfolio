@@ -67,7 +67,28 @@ export default class Creator {
         "Mail : mael.garnier@etu.univ-grenoble-alpes.fr </br> Tel : +33 7 77 33 31 62"
       );
     });
-      
+
+    elem.querySelector(".credits").addEventListener("click", () => {
+      designer.drawPopUp(
+        "Credits",
+        "Illustration et icones par   <a href=\"https://undraw.co/illustrations\" class=\"link\">Undraw</a>  <a href=\"https://lordicon.com/\" class=\"link\">Lord-icon</a>"
+      );
+    });
+
+    elem.querySelector(".partage").addEventListener("click", () => {
+      let corps = "Découvrez le site de Maël Garnier, étudiant en informatique à l'UGA : https://mael-garnier.fr"
+      window.location.href = "mailto:destinataire@exemple.com?subject=Apprenez-en plus sur Maël Garnier&body="+corps;
+
+    });
+    
+    elem.querySelectorAll(".buttons .links a").forEach(e => {
+      e.addEventListener("mouseover", () => {
+        e.querySelector("lord-icon")
+          .playerInstance.playFromBeginning();
+      });
+    }) 
+
+    
         return elem;
 
   }
@@ -104,7 +125,6 @@ export default class Creator {
           .querySelector(".search-box input")
           .addEventListener("keyup", async (e) => {
             let search = e.target.value.toLowerCase();
-            search = search.split(" ");
             let result = await Utils.search(search);
             console.log(e.target.value.length);
             if (e.target.value.length <= 1) {
@@ -148,9 +168,11 @@ export default class Creator {
 
         contentElem.classList.add("content-component-sum");
         contentElem.querySelector("h2").innerText = content.title || "Titre";
-        contentElem.querySelector("p").innerText =
-          content.summary ||
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.";
+        let summary = content.summary || content.content[0].data;
+        if (summary.length > 100) {
+          summary = summary.substring(0, 300) + "...";
+        }
+        contentElem.querySelector("p").innerText = summary;
         content.tags.forEach((tag) => {
           let tagElem = document.createElement("span");
           tagElem.innerText = tag;
