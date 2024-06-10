@@ -1,7 +1,7 @@
 header {
     display: flex;
-    width: 80%;
-    padding: 20px 10%;
+    width: 100%;
+    padding: 20px 0%;
     height: 60px;
     align-items: center;
     justify-content: center;
@@ -9,6 +9,8 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
+    transition: all .3s ease;
 }
 
 .menu {
@@ -83,10 +85,33 @@ nav ul li a:hover::after {
     background-color: var(--color-accent);
 }
 
+.max-content header {
+    padding: 5px 20px;
+    margin: 0 calc(50% - 350px);
+    top: 0px;
+    width: 700px;
+    background-color: var(--color-primary);
+    border-radius: 0px 0px 25px 25px;
+}
+
+.max-content header .contact {
+    left: 20px;
+    top: 12.5px;
+    font-size: 0;
+    width: 45px;
+}
+.max-content header .contact lord-icon {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
 
 @media (max-width: 899px) {
 
-    header {
+    header, .max-content header {
         display: flex;
         width: 90%;
         padding: 0 5% 0 5%;
@@ -99,9 +124,14 @@ nav ul li a:hover::after {
         left: 0;
         transform: translateY( -80% );
         transition: all .3s ease;
+        background-color: transparent;
+        margin: 0;
+        backdrop-filter: none;
+        border-radius: 0;
     }
 
-    .header-down {
+    
+    .header-down, .max-content .header-down {
         background-color: var(--color-background);
         backdrop-filter: blur(10px);
         transform: translate(0);
@@ -118,7 +148,13 @@ nav ul li a:hover::after {
         background-color: var(--color-ui);
         border-radius: 50px;
         transition: all .3s ease;
+        z-index: 100;
     }
+
+    .max-content .menu {
+        background-color: var(--color-primary);
+    }
+
 
     .menu:active{
         transform: scale(.7);
@@ -132,6 +168,10 @@ nav ul li a:hover::after {
         width: 30px;
         background-color: var(--color-text);
         left: calc(50% - 15px);
+    }
+
+    .max-content .menu span {
+        background-color: var(--color-ui);
     }
 
     .menu span:first-child {
@@ -167,7 +207,7 @@ nav ul li a:hover::after {
         transform: rotate(-45deg);
     }
     
-    header .contact {
+    header .contact, .max-content header .contact{
         position:absolute;
         left: auto;
         right: 25px;
@@ -188,7 +228,7 @@ nav ul li a:hover::after {
         padding: 0;
     }
 
-    header .contact lord-icon {
+    header .contact lord-icon, .max-content header .contact lord-icon{
         position: absolute;
         width: 30px;
         height: 30px;

@@ -30,6 +30,17 @@
     }
   }
 
+  static setMaxContent() {
+    const body = document.querySelector("body");
+    if (document.querySelector(".container").scrollTop < 50) {
+      if (body.classList.contains("max-content")) {
+        body.classList.remove("max-content");
+      }
+  } else {
+      body.classList.add("max-content");
+  }
+  }
+
   /**
    * permet de determiner un element html est affiché sur l'ecran
    * @param {*} element

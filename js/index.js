@@ -13,4 +13,5 @@ document.querySelector(".container").addEventListener("scroll", () => {
     appearsOnScrollElements.forEach((element) => {
         Utils.appearsOnScroll(element);
     });
+    Utils.setMaxContent();
 });

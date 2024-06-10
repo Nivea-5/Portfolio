@@ -2,6 +2,7 @@
 
 :root {
     --color-primary-variant: #364A6A;
+    --maximised-navbar: #1c3043bc;
     --color-primary: #1C3043;
     --color-ui: #DAE3EB;
     --color-ui-hover: #bdc6cd;
@@ -189,15 +190,18 @@ p {
 body {
     background-image: url(../img/moutains.jpg);
     background-position: center;
-    background-size: cover;
+    background-size: 120%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
     overflow: hidden;
+    transition: all .3s ease;
 }
 
 
-
+.max-content {
+    background-size:170%;
+}
 
 
 .container {
@@ -219,6 +223,16 @@ body {
     transform: translateY(100%);
 }
 
+.max-content .container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+    background-color: var(--color-ui);
+}
+
 main {
     padding: 5%;
     width: 90%;
@@ -228,10 +242,16 @@ main {
     transition: all .3s ease;
 }
 
-
+.max-content main {
+    border-radius: 0px;
+}
 
 
 @media (max-width: 899px) {
+
+    body, .max-content {
+        background-size:cover;
+    }
 
     h1 {
         font-size: 30px;
@@ -266,6 +286,7 @@ main {
         scroll-behavior: smooth;
         animation: zoom-from-bottom .5s ease;
         transition: all .3s ease;
+        
     }
     
     .container-hide {
@@ -301,4 +322,5 @@ main {
         transform: scale(.7);
         transition: all .2s ease;
     }
+
 }

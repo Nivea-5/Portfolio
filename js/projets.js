@@ -15,3 +15,7 @@ Utils.getContent("projets.md").then((data) => {
      designer.drawContentSummary(element, () => designer.drawContent(element));
   });
 });
+
+document.querySelector(".container").addEventListener("scroll", () => {
+  Utils.setMaxContent();
+});
