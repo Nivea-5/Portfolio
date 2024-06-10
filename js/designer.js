@@ -1,6 +1,9 @@
 import Creator from "./creator.js";
+import Utils from "./utils.js";
+
 
 export default class designer {
+
   static async drawNavBar(selectedId, parent = "body") {
     let navbar = await Creator.createNavbar(selectedId);
     let menuBtn = Creator.createMenuBtn(navbar);

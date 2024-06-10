@@ -4,8 +4,9 @@ import Utils from "./utils.js";
 
 let appearsOnScrollElements = document.querySelectorAll(".appearsOnScroll");
 
-designer.drawNavBar("competences");
-designer.drawFooter();
+Utils.activateLoader();
+await designer.drawNavBar("competences");
+await designer.drawFooter();
 
 function drawSection(content) {
   let section = document.createElement("section");
@@ -50,6 +51,7 @@ Utils.getContent("competences.md").then((data) => {
   appearsOnScrollElements = document.querySelectorAll(".appearsOnScroll");
 });
 
+Utils.disactivateLoader();
 document.querySelector(".container").addEventListener("scroll", () => {
   appearsOnScrollElements.forEach((element) => {
     Utils.appearsOnScroll(element);

@@ -1,8 +1,9 @@
 import designer from "./designer.js";
 import Utils from "./utils.js"
 
-designer.drawNavBar("experiences");
-designer.drawFooter();
+Utils.activateLoader();
+await designer.drawNavBar("experiences");
+await designer.drawFooter();
 
 
 
@@ -11,11 +12,12 @@ designer.drawFooter();
   Utils.getContent("experiences.md").then((data) => {
     data = Utils.parseMarkdown(data);
   
-    data.forEach((element) => {
-      designer.drawContentSummary(element, () => designer.drawContent(element));
+    data.forEach(async (element) => {
+      await designer.drawContentSummary(element, () => designer.drawContent(element));
     });
   });
 
+  Utils.disactivateLoader();
   document.querySelector(".container").addEventListener("scroll", () => {
     Utils.setMaxContent();
   });

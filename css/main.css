@@ -148,6 +148,24 @@ p {
     animation: element-appears .7s ease;
 }
 
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    background-color: var(--color-background);
+    z-index: 100000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-visible {
+    display: flex;
+}
+
 .button-light {
     color: var(--color-primary);
     text-decoration: none;
@@ -291,6 +309,8 @@ main {
     .container-hide {
         transform: translateY(100%);
     }
+
+    
     
     main {
         padding: 5%;
