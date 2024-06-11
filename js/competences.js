@@ -7,6 +7,7 @@ await designer.drawNavBar("competences");
 await designer.drawFooter();
 //utils.drawPopUp();
 
+Utils.setupMoreButton();
 
 
 function drawSection(content) {

@@ -1,15 +1,24 @@
 
 .intro {
     width: 100%;
+    height: calc(100vh - 200px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-bottom: 7%;
+    transition: all .3s ease;
 }
-
+.max-content .intro {
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 300px;
+}
 .intro p {
     text-align: center;
     width: 50%;
+    margin-bottom: 30px;
+
 }
 
 main {
@@ -23,7 +32,19 @@ main {
     main {
         padding: 10% 5%;
     }
+    .intro h1 {
+        text-align: center;
+    }
     .intro p {
+        text-align: center;
         width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .intro {
+        height: calc(100vh - 100px);
+        align-items: center;
+        margin: 75px 0 0 0;
+        justify-content: center;
     }
 }

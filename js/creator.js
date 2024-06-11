@@ -189,7 +189,7 @@ export default class Creator {
         contentElem.classList.add("content-component-sum");
         contentElem.querySelector("h2").innerText = content.title || "Titre";
         let summary = content.summary || content.content[0].data;
-        if (summary.length > 100) {
+        if (summary.length > 300) {
           summary = summary.substring(0, 300) + "...";
         }
         contentElem.querySelector("p").innerText = summary;

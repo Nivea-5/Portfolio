@@ -14,6 +14,7 @@ await designer.drawFooter();
 //utils.drawPopUp();
 
 Utils.makeImgClickable();
+Utils.setupMoreButton();
 
 document.querySelector(".container").addEventListener("scroll", () => {
     appearsOnScrollElements.forEach((element) => {

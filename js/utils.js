@@ -46,7 +46,7 @@ import designer from "./designer.js";
 
   static setMaxContent() {
     const body = document.querySelector("body");
-    if (document.querySelector(".container").scrollTop < 50) {
+    if (document.querySelector(".container").scrollTop < 60) {
       if (body.classList.contains("max-content")) {
         body.classList.remove("max-content");
       }
@@ -86,6 +86,17 @@ import designer from "./designer.js";
       
     });
 
+  }
+
+  static setupMoreButton() {
+    const moreButton = document.querySelector(".more-btn");
+    if (moreButton) {
+      moreButton.addEventListener("click", () => {
+        const content = document.querySelector(".container");
+        content.scrollTop = 200;
+        console.log("scrolling");
+      });
+    }
   }
 
   /**

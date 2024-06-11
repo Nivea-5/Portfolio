@@ -202,7 +202,24 @@ p {
     
 }
 
-
+.to-top {
+    display: none;
+}
+.max-content .to-top {
+    animation: zoom .5s ease;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-ui-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin-left: 45px;
+}
 
 
 
@@ -269,7 +286,7 @@ main {
 @media (max-width: 1000px) {
 
     body, .max-content {
-        background-size:cover;
+        background: var(--color-ui);
     }
 
     h1 {
@@ -294,12 +311,12 @@ main {
     
     .container {
         position: absolute;
-        top: 50px;
+        top: 0px;
         margin: 0;
         width: 100%;
-        height: calc(100% - 50px);
-        border-radius: 50px 50px 0 0;
+        height: 100%;
         overflow: hidden;
+        border-radius: 0px;
         overflow-y: auto;
         scrollbar-width: none;
         scroll-behavior: smooth;
@@ -317,8 +334,8 @@ main {
     main {
         padding: 5%;
         width: 90%;
+        border-radius: 0px;
         min-height: 100%;
-        border-radius: 50px;
         background-color: var(--color-ui);
         transition: all .3s ease;
     }

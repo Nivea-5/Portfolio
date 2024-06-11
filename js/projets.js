@@ -4,6 +4,7 @@ import Utils from "./utils.js";
 await designer.drawNavBar("projets");
 await designer.drawFooter();
 
+Utils.setupMoreButton();
 
 
 Utils.getContent("projets.md").then((data) => {

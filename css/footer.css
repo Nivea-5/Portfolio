@@ -18,9 +18,14 @@ footer .buttons {
     justify-content: space-between;
     gap: 20px;
     width: 100%;
+    position: relative;
+
 }
 
 footer .buttons img {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100px;
     height: 100px;
 }
@@ -28,7 +33,12 @@ footer .buttons img {
 footer .buttons .links {
     display: flex;
     width: fit-content;
+    flex-wrap: wrap;
     gap: 20px;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 footer .buttons .links a {
     display: flex;
@@ -54,16 +64,6 @@ footer .buttons a:hover  {
     
 }
 
-footer .to-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    margin-left: 45px;
-}
 footer p {
     margin: 0;
 }
@@ -72,4 +72,22 @@ footer p {
     footer .buttons {
         flex-direction: column;
     }
+
+    footer .buttons .links a {
+        font-size: 0px;
+        padding: 0;
+        min-width: 50px;
+        max-width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+
+    footer img {
+        display: none;
+    }
+
+    
+
 }
