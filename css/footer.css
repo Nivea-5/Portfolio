@@ -68,7 +68,7 @@ footer p {
     margin: 0;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 1000px) {
     footer .buttons {
         flex-direction: column;
     }

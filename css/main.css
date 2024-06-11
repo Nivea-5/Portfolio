@@ -205,9 +205,9 @@ p {
 
 
 body {
-    background-image: url(../img/moutains.jpg);
-    background-position: center;
-    background-size: 120%;
+    background-image: url(../img/moutains.webp);
+    background-position: top;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
@@ -217,7 +217,7 @@ body {
 
 
 .max-content {
-    background-size:170%;
+    background-size:120%;
 }
 
 
@@ -264,7 +264,7 @@ main {
 }
 
 
-@media (max-width: 899px) {
+@media (max-width: 1000px) {
 
     body, .max-content {
         background-size:cover;

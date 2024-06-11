@@ -196,7 +196,7 @@
     height: 50px;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 1000px) {
 
     .search {
         top: 25px;

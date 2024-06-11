@@ -4,9 +4,6 @@ import Utils from "./utils.js";
 
 let appearsOnScrollElements = document.querySelectorAll(".appearsOnScroll");
 
-window.onload = function() {
-  Utils.activateLoader();
-};
 await designer.drawNavBar("competences");
 await designer.drawFooter();
 
@@ -53,7 +50,6 @@ Utils.getContent("competences.md").then((data) => {
   appearsOnScrollElements = document.querySelectorAll(".appearsOnScroll");
 });
 
-Utils.disactivateLoader();
 document.querySelector(".container").addEventListener("scroll", () => {
   appearsOnScrollElements.forEach((element) => {
     Utils.appearsOnScroll(element);

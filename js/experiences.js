@@ -1,9 +1,6 @@
 import designer from "./designer.js";
 import Utils from "./utils.js"
 
-window.onload = function() {
-  Utils.activateLoader();
-};
 await designer.drawNavBar("experiences");
 await designer.drawFooter();
 
@@ -19,7 +16,6 @@ await designer.drawFooter();
     });
   });
 
-  Utils.disactivateLoader();
   document.querySelector(".container").addEventListener("scroll", () => {
     Utils.setMaxContent();
   });

@@ -42,19 +42,7 @@ import designer from "./designer.js";
     }
   }
 
-  static activateLoader() {
-    document.querySelector(".loader")
-    if (!document.querySelector(".loader").classList.contains("loader-visible")) {
-      document.querySelector(".loader").classList.add("loader-visible");
-    }
-  }
-
-  static disactivateLoader() {
-    document.querySelector(".loader")
-    if (document.querySelector(".loader").classList.contains("loader-visible")) {
-      document.querySelector(".loader").classList.remove("loader-visible");
-    }
-  }
+ 
 
   static setMaxContent() {
     const body = document.querySelector("body");
