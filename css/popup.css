@@ -78,13 +78,13 @@
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     .popup .content {
         width: 90%;
         max-height: 85%;
         min-height:fit-content;
         left: 5%;
-        align-items: start;
+        align-items: center;
     }
 
 
