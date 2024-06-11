@@ -10,7 +10,7 @@
 }
 
 .max-content .search:not(.search-expand) {
-    right: calc(50% - 370px);
+    right: calc(50% - 350px);
     top: 12.5px;
     width: 45px;
     height: 45px;

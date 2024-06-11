@@ -87,7 +87,7 @@ nav ul li a:hover::after {
 
 .max-content header {
     padding: 5px 20px;
-    margin: 0 calc(50% - 350px);
+    margin: 0 calc(50% - 370px);
     top: 0px;
     width: 700px;
     background-color: var(--color-primary);
