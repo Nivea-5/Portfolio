@@ -1,8 +1,9 @@
 import designer from "./designer.js";
 import Utils from "./utils.js";
 
-
-Utils.activateLoader();
+window.onload = function() {
+  Utils.activateLoader();
+};
 await designer.drawNavBar("projets");
 await designer.drawFooter();
 

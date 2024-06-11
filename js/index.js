@@ -3,9 +3,13 @@ import Utils from "./utils.js"
 
 const utils = new Utils();
 
+window.onload = function() {
+    Utils.activateLoader();
+  };
+
 const appearsOnScrollElements = document.querySelectorAll(".appearsOnScroll");
 
-Utils.activateLoader();
+
 await designer.drawNavBar("accueil");
 await designer.drawFooter();
 Utils.disactivateLoader();

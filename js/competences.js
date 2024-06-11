@@ -4,7 +4,9 @@ import Utils from "./utils.js";
 
 let appearsOnScrollElements = document.querySelectorAll(".appearsOnScroll");
 
-Utils.activateLoader();
+window.onload = function() {
+  Utils.activateLoader();
+};
 await designer.drawNavBar("competences");
 await designer.drawFooter();
 
