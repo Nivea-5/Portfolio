@@ -7,6 +7,7 @@ await designer.drawFooter();
 
 
 Utils.getContent("projets.md").then((data) => {
+  Utils.makeImgClickable();
   data = Utils.parseMarkdown(data);
 
 

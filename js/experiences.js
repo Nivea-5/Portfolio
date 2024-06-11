@@ -10,9 +10,10 @@ await designer.drawFooter();
   
   Utils.getContent("experiences.md").then((data) => {
     data = Utils.parseMarkdown(data);
-  
+    Utils.makeImgClickable();
     data.forEach(async (element) => {
       await designer.drawContentSummary(element, () => designer.drawContent(element));
+      
     });
   });
 

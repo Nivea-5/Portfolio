@@ -161,6 +161,22 @@ export default class Creator {
         return popup;
   }
 
+  static async createFullImg(src) {
+    let data = await Utils.getComponent("fullImg.html")
+        let fullImg = document.createElement("div");
+        fullImg.classList.add("full-img");
+        fullImg.innerHTML = data;
+        fullImg.querySelector("img").src = src;
+        let closeBtn = fullImg.querySelector(".cross");
+        
+        closeBtn.addEventListener("click", () => {
+          fullImg.querySelector("img").classList.add("img-closing");
+          fullImg.querySelector(".full-img-bg").classList.add("full-img-bg-closing");
+          setTimeout(() => designer.removeFullImg(), 450);
+        });
+        return fullImg;
+  }
+
   static async createContentSummary(content, onClickAction) {
     let data = await Utils.getComponent("contentSummary.html")
         let contentElem = document.createElement("div");

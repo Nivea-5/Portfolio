@@ -34,10 +34,21 @@ export default class designer {
     document.querySelector(parent).appendChild(popup);
   }
 
+  static async drawFullImg(src, parent = "body") {
+    let img = await Creator.createFullImg(src);
+    document.querySelector(parent).appendChild(img);
+  }
+
   static removePopup(parent = "body") {
     document
       .querySelector(parent)
       .removeChild(document.querySelector(".popup"));
+  }
+
+  static removeFullImg(parent = "body") {
+    document
+      .querySelector(parent)
+      .removeChild(document.querySelector(".full-img"));
   }
 
   static async drawContentSummary(content, onClickAction, parent = "main") {
@@ -49,6 +60,7 @@ export default class designer {
     let contentElem = await Creator.createContent(content)
     document.querySelector(parent).appendChild(contentElem);
     document.querySelector(".container").classList.add("smaller");
+    Utils.makeImgClickable();
   }
 
   static removeContent(id, parent = "body") {

@@ -46,10 +46,10 @@
 
 .content-component {
     position: absolute;
-    top: calc(50% - 100px);
+    top: calc(30% - 100px);
     left: 5%;
     width: calc(90% - 100px);
-    height: 50%;
+    height: 70%;
     background-color: var(--color-ui);
     padding: 50px;
     border-radius: 35px 35px 0 0;
@@ -82,7 +82,7 @@
 }
 
 .content-component img {
-    width: 50%;
+    width: 20%;
     object-fit: contain;
 }
 

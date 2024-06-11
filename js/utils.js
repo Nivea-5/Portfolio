@@ -77,6 +77,16 @@ import designer from "./designer.js";
     }
   }
 
+  static makeImgClickable() {
+    const img = document.querySelectorAll("img");
+    img.forEach(element => {
+      element.addEventListener("click", () => {
+        designer.drawFullImg(element.src);
+    });
+    });
+
+  }
+
   /**
    * Permets de rechercher dans tous les documents contenus dans content/ un certain nombre de mots
    * @param {*} input une liste de mots a rechercher

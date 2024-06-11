@@ -1,11 +1,13 @@
 import designer from "./designer.js";
 import Utils from "./utils.js";
 
-
-let appearsOnScrollElements = document.querySelectorAll(".appearsOnScroll");
+let appearsOnScrollElements;
 
 await designer.drawNavBar("competences");
 await designer.drawFooter();
+//utils.drawPopUp();
+
+
 
 function drawSection(content) {
   let section = document.createElement("section");
@@ -48,11 +50,12 @@ Utils.getContent("competences.md").then((data) => {
   });
 
   appearsOnScrollElements = document.querySelectorAll(".appearsOnScroll");
+  Utils.makeImgClickable();
 });
 
 document.querySelector(".container").addEventListener("scroll", () => {
   appearsOnScrollElements.forEach((element) => {
-    Utils.appearsOnScroll(element);
+      Utils.appearsOnScroll(element);
   });
   Utils.setMaxContent();
 });
