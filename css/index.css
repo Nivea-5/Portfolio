@@ -83,7 +83,7 @@ section:not(.intro) .button-dark {
     width:fit-content;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
     .intro p {
         text-align: center;
         width: 100%;

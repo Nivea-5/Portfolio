@@ -108,8 +108,22 @@ nav ul li a:hover::after {
     top: 5px;
 }
 
+@media (min-width: 700px) and (max-width: 1000px) {
+    header .contact {
+        font-size: 0;
+        width: 45px;
 
-@media (max-width: 1000px) {
+    }
+    header .contact lord-icon {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+    }
+}
+
+@media (max-width: 700px) {
 
     header, .max-content header {
         display: flex;

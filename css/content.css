@@ -165,7 +165,7 @@
     height: 0; /* Hauteur de la barre de défilement à 0 */
 }   
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
 
     .content-component {
         position: absolute;

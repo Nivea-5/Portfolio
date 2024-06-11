@@ -79,7 +79,7 @@ section:not(.intro) p {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
     .intro p {
         text-align: center;
         width: 100%;

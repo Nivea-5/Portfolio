@@ -71,6 +71,22 @@
     display: none;
 }
 
+@media (min-width: 700px) and (max-width: 1000px) {
+    
+    .search:not(.search-expand) {
+       
+        width: 45px;
+        height: 45px;
+    }
+    .search-box:not(.search-expand .search-box) {
+        width: 45px;
+        height: 45px;
+    }
+    .search-box a:not(.search-expand .search-box a) {
+        display: none;
+    }
+}
+
  .search-box input {
     height: 0;
     width: 0;
@@ -196,7 +212,8 @@
     height: 50px;
 }
 
-@media (max-width: 1000px) {
+
+@media (max-width: 700px) {
 
     .search {
         top: 25px;
