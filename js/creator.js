@@ -30,22 +30,26 @@ export default class Creator {
 
   static createMenuBtn(header) {
     let menuBtn = document.createElement("div");
-    menuBtn.classList.add("menu");
-    let menuSpan1 = document.createElement("span");
-    let menuSpan2 = document.createElement("span");
-    let menuSpan3 = document.createElement("span");
+    let hamburger = document.createElement("div");
+    let text = document.createElement("p");
+    text.innerText = "Menu";
+    hamburger.classList.add("hamburger");
+    menuBtn.appendChild(hamburger);
+    menuBtn.appendChild(text);
 
-    menuBtn.appendChild(menuSpan1);
-    menuBtn.appendChild(menuSpan2);
-    menuBtn.appendChild(menuSpan3);
+    menuBtn.classList.add("menu");
+    
+
 
     menuBtn.addEventListener("click", () => {
       if (header.classList.contains("header-down")) {
+        menuBtn.querySelector("p").innerText = "Menu";
         header.classList.remove("header-down");
         document.querySelector("body").classList.remove("background-moved");
         document.querySelector(".container").classList.remove("container-hide");
         menuBtn.classList.remove("menu-down");
       } else {
+        menuBtn.querySelector("p").innerText = "Fermer";
         header.classList.add("header-down");
         document.querySelector("body").classList.add("background-moved");
         document.querySelector(".container").classList.add("container-hide");
