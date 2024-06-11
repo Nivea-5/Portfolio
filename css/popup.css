@@ -99,6 +99,14 @@
 
 /*--------------------------------------------------------------------------------------------------------*/
 
+img {
+    transition: all .3s ease;
+
+}
+img:hover:not(.full-img img:hover) {
+    cursor: pointer;
+    transform: scale(1.1);
+}
 
 .full-img {
     position: absolute;

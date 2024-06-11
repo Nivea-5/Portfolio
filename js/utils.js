@@ -83,6 +83,7 @@ import designer from "./designer.js";
       element.addEventListener("click", () => {
         designer.drawFullImg(element.src);
     });
+      
     });
 
   }
