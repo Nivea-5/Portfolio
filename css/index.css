@@ -76,6 +76,7 @@ section:not(.intro) h2 {
 
 section:not(.intro) p {
     margin: 5% 0;
+    max-width: 1000px;
 }
 
 section:not(.intro) .button-dark {

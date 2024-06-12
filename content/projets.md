@@ -1,3 +1,19 @@
+# Ce portfolio
+* HTML
+* CSS
+* JavaScript
+* Developpement WEB
+* Plublication d'un site
+* Indexation d'un sit sur les moteurs de recherche
+
+Ce projet consiste en la réalisation de ce portfolio depuis zéro. Véritable vitrine de mes compétences, j'y ai apporté une attention particulière. Afin de limiter les coûts de déploiement sur mon hébergeur, j'ai choisi de le développer uniquement en HTML, CSS et JavaScript, sans utiliser de framework, de plugins ni de bibliothèque.
+
+Malgré ces contraintes techniques, je souhaitais avoir un site fluide et dynamique, où l'ajout de contenu est simplifié au maximum. En plus de porter une grande attention à la réalisation du CSS, le développement des divers composants JavaScript a joué un rôle crucial dans ce projet. Un fichier Creator.js permet de créer des éléments HTML à partir de "components", c'est-à-dire des morceaux de code HTML. Un fichier Designer.js permet d'ajouter ces éléments aux endroits appropriés sur les pages. Enfin, chaque page a un fichier dédié pour gérer l'ajout des éléments en fonction du contexte. Un fichier Utils.js permet d'ajouter certaines fonctionnalités globales au site. Ainsi, certains composants comme la barre de navigation, le footer, les popups, la barre de recherche ou encore les blocs de contenu dans les pages "Projets" et "Expériences" sont ajoutés dynamiquement.
+
+Les blocs de contenu sont automatiquement créés à partir de fichiers Markdown contenant les titres, textes, liens ou images à afficher. Pour trier facilement ces éléments et les ajouter au bon endroit, il a été nécessaire de développer une fonction de parsing de Markdown. Ainsi, le simple fait d'écrire dans ces fichiers ajoute automatiquement de nouveaux éléments à la page web.
+
+Une fois le développement terminé, j'ai déployé mon site depuis l'hébergeur infinityfree.com. Pour avoir un nom de domaine personnalisé, j'ai acquis le domaine mael-garnier.fr depuis amen.fr. Après la configuration des DNS, le site était enfin disponible sous mon domaine. Après des discussions avec des développeurs professionnels, j'ai décidé de migrer mon site vers Vercel, ce qui apporte de nombreux avantages, notamment la synchronisation automatique avec le dépôt GitHub.
+
 # Stage Rapido 
 * Symfony
 * Bootstrap
