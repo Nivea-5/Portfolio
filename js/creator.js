@@ -14,10 +14,7 @@ export default class Creator {
 
         let contactBtn = header.querySelector(".contact");
         contactBtn.addEventListener("click", () => {
-          designer.drawPopUp(
-            "Contactez moi !",
-            "Mail : mael.garnier@etu.univ-grenoble-alpes.fr </br> Tel : +33 7 77 33 31 62"
-          );
+          designer.drawContactPopup();
         });
         contactBtn.addEventListener("mouseover", () => {
           contactBtn
@@ -156,6 +153,41 @@ export default class Creator {
         popup.querySelector("h2").innerText = title || "Default Message";
         popup.querySelector("p").innerHTML =
           content || "You're seeing the default message for a popup window";
+
+        closeBtn.addEventListener("click", () => {
+          popup.querySelector(".content").classList.add("content-closing");
+          popup.querySelector(".popup-bg").classList.add("popup-bg-closing");
+          setTimeout(() => designer.removePopup(), 450);
+        });
+        return popup;
+  }
+
+  static async createContactPopup() {
+    let data = await Utils.getComponent("contactPopup.html")
+        let popup = document.createElement("div");
+        popup.classList.add("popup");
+        popup.classList.add("contact-popup");
+        popup.innerHTML = data;
+        let closeBtn = popup.querySelector(".cross");
+        let sendBtn = popup.querySelector(".send-email");
+
+        sendBtn.addEventListener("click", async () => {
+          
+ 
+          let response = await Utils.handleForm("#contactForm");
+          popup.querySelector(".result-field").innerHTML = response.message;
+          let responseClass = response.status ? "valid" : "error";
+          popup.querySelector(".result-field").classList.add(responseClass);
+          setTimeout(() => {
+            popup.querySelector(".result-field").classList.remove(responseClass); 
+            popup.querySelector(".result-field").classList.add("gone");
+            setTimeout(() => {
+              popup.querySelector(".result-field").classList.remove("gone");
+              popup.querySelector(".result-field").innerHTML = "nothing to show"; 
+            }, 450);
+            
+          }, 5000);
+        });
 
         closeBtn.addEventListener("click", () => {
           popup.querySelector(".content").classList.add("content-closing");

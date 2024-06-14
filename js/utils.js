@@ -55,6 +55,66 @@ import designer from "./designer.js";
   }
   }
 
+  static async handleForm(formId) {
+    let form = document.querySelector(formId);
+    let lname = form.querySelector("#lname").value;
+    let fname = form.querySelector("#fname").value;
+    let enterprise = form.querySelector("#enterprise").value;
+    let email = form.querySelector("#from").value;
+    let emailConf = form.querySelector("#emailConf").value;
+    let message = form.querySelector("#message").value;
+    let response;
+    if (lname.length == 0 || fname.length == 0 || enterprise.length == 0 || email.length == 0 || message.length == 0) {
+      response = {
+        status: false,
+        message: "Veuillez remplir tous les champs du formulaire"
+      }
+      console.log(response);
+      return response;
+    }
+    if (email != emailConf) {
+      response =  {
+        status: false,
+        message: "Les adresses email ne correspondent pas"
+      }
+      console.log(response);
+      return response;
+    }
+    if (!email.includes("@") || !email.includes(".")) {
+      response =  {
+        status: false,
+        message: "Veuillez entrer une adresse email valide"
+      }
+      console.log(response);
+      return response;
+    }
+
+    emailjs.init({
+      publicKey: 'Y1W6sMtCwBydZwWDc',
+      blockHeadless: true,
+      limitRate: {
+        id: 'app',
+        throttle: 1000,
+      },
+    });
+
+    try {
+      const result = await emailjs.sendForm('service_eku2fls', 'template_1n1gusl', formId);
+      response = {
+          status: true,
+          message: "Email envoyé !"
+      };
+      return response;
+  } catch (error) {
+      response = {
+          status: false,
+          message: "Une erreur s'est produite durant l'envoi, veuillez réessayer plus tard."
+      };
+      return response;
+  }
+  }
+
+  
   /**
    * permet de determiner un element html est affiché sur l'ecran
    * @param {*} element

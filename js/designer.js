@@ -56,6 +56,11 @@ export default class designer {
     document.querySelector(parent).appendChild(contentElem);
   }
 
+  static async drawContactPopup(parent = "body") {
+    let contentElem = await Creator.createContactPopup();
+    document.querySelector(parent).appendChild(contentElem);
+  }
+
   static async drawContent(content, parent = "body") {
     let contentElem = await Creator.createContent(content)
     document.querySelector(parent).appendChild(contentElem);

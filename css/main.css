@@ -9,6 +9,8 @@
     --color-background: #000000cf;
     --color-text: black;
     --color-text-inversed: white;
+    --color-error: #b00020;
+    --color-valid: #4CAF50;
   }
 
   * {
