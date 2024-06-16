@@ -63,10 +63,7 @@ export default class Creator {
     let elem = document.createElement("footer");
     elem.innerHTML = data
     elem.querySelector(".contact").addEventListener("click", () => {
-      designer.drawPopUp(
-        "Contactez moi !",
-        "Mail : mael.garnier@etu.univ-grenoble-alpes.fr </br> Tel : +33 7 77 33 31 62"
-      );
+      designer.drawContactPopup();
     });
 
     elem.querySelector(".credits").addEventListener("click", () => {

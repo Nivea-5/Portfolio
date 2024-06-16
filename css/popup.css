@@ -81,10 +81,10 @@
 
 @media (max-width: 700px) {
     .popup .content {
-        width: 90%;
+        width: calc(100% - 30px);
         max-height: 85%;
         min-height:fit-content;
-        left: 5%;
+        left: 15px;
         align-items: center;
     }
 
@@ -92,9 +92,10 @@
 
     .popup h2 {
         color: var(--color-text);
-        margin-left: 15px;
         margin-top: 25px;
-        width: calc(90% - 100px);
+        margin-left: 30px;
+        margin-right: 80px;
+        width: 100%;
     }
 
     .popup p {
@@ -198,6 +199,13 @@ img:hover:not(.full-img img:hover) {
     max-height: calc(100% - 30px);
     min-height: calc(100% - 30px);
     left: 17.5%;
+}
+
+@media (max-width: 700px) {
+    .contact-popup .content {
+        width: calc(100% - 30px);
+        left: 15px;
+    }
 }
 
 .contact-popup .content::-webkit-scrollbar {
