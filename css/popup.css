@@ -308,6 +308,7 @@ img:hover:not(.full-img img:hover) {
     margin: 20px 0;
     border: none;
     height: 40px;
+    min-height: 40px;
     transition: all .3s ease;
 }
 
