@@ -173,17 +173,24 @@ export default class Creator {
 
         sendBtn.addEventListener("click", async () => {
           
- 
+          popup.querySelector(".send-email").classList.add("waiting");
           let response = await Utils.handleForm("#contactForm");
-          popup.querySelector(".result-field").innerHTML = response.message;
+          popup.querySelector(".send-email").classList.remove("waiting");
+
+          let resultField = popup.querySelector(".result-field");
+          resultField.innerHTML = response.message;
           let responseClass = response.status ? "valid" : "error";
-          popup.querySelector(".result-field").classList.add(responseClass);
+
+          resultField.classList.remove("error");
+            resultField.classList.remove("valid");
+
+          resultField.classList.add(responseClass);
           setTimeout(() => {
-            popup.querySelector(".result-field").classList.remove(responseClass); 
-            popup.querySelector(".result-field").classList.add("gone");
+            resultField.classList.remove(responseClass); 
+            resultField.classList.add("gone");
             setTimeout(() => {
-              popup.querySelector(".result-field").classList.remove("gone");
-              popup.querySelector(".result-field").innerHTML = "nothing to show"; 
+              resultField.classList.remove("gone");
+              resultField.innerHTML = "nothing to show"; 
             }, 450);
             
           }, 5000);

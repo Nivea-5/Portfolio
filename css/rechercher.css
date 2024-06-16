@@ -59,6 +59,12 @@
     transform: translateY(-7px);
 }
 
+.search-box:active {
+    transition: all .2s ease;
+    box-shadow: 0px 0px 0px var(--color-primary);
+    transform: translateY(0px);
+}
+
 .search-box a {
     text-decoration: none;
     font-weight: 500;

@@ -11,7 +11,7 @@
 .max-content .intro {
     height: 0;
     overflow: hidden;
-    margin-bottom: 300px;
+    margin-bottom: 250px;
 }
 
 .intro h3 {
@@ -96,6 +96,10 @@ section:not(.intro) .button-dark {
         align-items: center;
         margin: 75px 0 0 0;
         justify-content: center;
+    }
+
+    .max-content .intro {
+        margin-bottom: 200px;
     }
     
     section:not(.intro) img {

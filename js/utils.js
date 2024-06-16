@@ -55,7 +55,16 @@ import designer from "./designer.js";
   }
   }
 
+  static lastEmailSent = 0;
+
   static async handleForm(formId) {
+
+    if (this.lastEmailSent != 0 && Date.now() - this.lastEmailSent < 10000) {
+      return {
+        status: false,
+        message: "Veuillez attendre 10 secondes avant de renvoyer un email"
+      };
+    }
     let form = document.querySelector(formId);
     let lname = form.querySelector("#lname").value;
     let fname = form.querySelector("#fname").value;
@@ -100,6 +109,7 @@ import designer from "./designer.js";
 
     try {
       const result = await emailjs.sendForm('service_eku2fls', 'template_1n1gusl', formId);
+      this.lastEmailSent = Date.now();
       response = {
           status: true,
           message: "Email envoyé !"

@@ -90,7 +90,7 @@ nav ul li a:hover::after {
     margin: 0 calc(50% - 370px);
     top: 0px;
     width: 700px;
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-variant);
     border-radius: 0px 0px 25px 25px;
 }
 
