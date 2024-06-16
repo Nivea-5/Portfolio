@@ -59,6 +59,8 @@ import designer from "./designer.js";
 
   static async handleForm(formId) {
 
+
+
     if (this.lastEmailSent != 0 && Date.now() - this.lastEmailSent < 10000) {
       return {
         status: false,
