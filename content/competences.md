@@ -14,7 +14,7 @@
 
 ![image](../img/programming.svg)
 
-Au cours de mon parcours universitaire, j'ai eu l'opportunité d'acquérir une diversité de langages de programmation et de concepts associés. Dès ma première année à l'IUT, j'ai débuté par l'apprentissage des fondamentaux de la programmation en Java, me permettant ainsi de me familiariser avec la Programmation Orientée Objet, la conception d'algorithmes, ainsi que le développement d'applications suivant le modèle MVC, notamment avec JavaFX.
+Au cours de mon parcours universitaire, j'ai eu l'opportunité d'acquérir des compétences dans une grande diversité de langages de programmation et de concepts associés. Dès ma première année à l'IUT, j'ai débuté par l'apprentissage des fondamentaux de la programmation en Java, me permettant ainsi de me familiariser avec la Programmation Orientée Objet, la conception d'algorithmes, ainsi que le développement d'applications suivant le modèle MVC, notamment avec JavaFX.
 
 Fort de ces bases, ma deuxième année a été consacrée au développement de compétences avancées à travers l'apprentissage du langage C, suivi du C++. Cette étape m'a permis de découvrir les design patterns, tels que le singleton ou le composite. La maîtrise de langages de bas niveau tels que le C et l'assembleur a également enrichi ma compréhension générale du fonctionnement des langages de programmation.
 
@@ -74,7 +74,7 @@ Plus généralement, dans le domaine des bases de données, j'ai perfectionné m
 
 J'ai rapidement acquis les compétences pour installer Linux, notamment en ligne de commande, et configurer tous les logiciels nécessaires au développement ou au déploiement d'un serveur simple. Cela comprend Apache, PostgreSQL, PHP, ainsi que la configuration du système et du réseau.
 
-Par la suite, j'ai découvert Docker, une alternative plus simple et efficace aux machines virtuelles que j'utilisais auparavant. J'ai rapidement appris à créer et gérer plusieurs conteneurs communicants, ainsi qu'à rédiger des Dockerfiles permettant à d'autres développeurs de créer leurs conteneurs de manière simple et rapide.
+Par la suite, j'ai découvert Docker, une alternative plus simple et efficace aux machines virtuelles que j'utilisais auparavant. J'ai rapidement appris à créer et gérer plusieurs conteneurs communicants, ainsi qu'à rédiger des Dockerfiles et docker-compose permettant à d'autres développeurs de créer leurs conteneurs de manière simple et rapide.
 
 # Réalisation de tests
 
