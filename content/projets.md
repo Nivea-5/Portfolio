@@ -9,7 +9,7 @@
 
 Ce projet personnel a pour objectif de créer un site web dynamique permettant de rechercher facilement des informations sur des films, de se constituer une liste de lecture et d'échanger des recommandations avec d'autres utilisateurs.
 
-<a href="https://alabasta.me/">Voir le projet</a>
+<a href="https://alabasta.me/">Voir le projet</a> Le code de connexion pour la démo est 269462
 
 Ce projet a été réalisé avec le framework Next.js, à partir duquel j'ai déployé une application web complexe au format MVC ainsi qu'une API permettant de récupérer et de trier les données provenant de plusieurs API dédiées aux films et à la base de données.
 
