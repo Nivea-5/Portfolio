@@ -1,3 +1,33 @@
+# Alabasta
+* Next.js
+* Déploiement d'application
+* Streaming vidéo
+* Création et gestion d'une base de données
+* PostgreSQL
+* Sécurisation des échanges avec le serveur
+* Réalisation d'une API
+
+Ce projet personnel a pour objectif de créer un site web dynamique permettant de rechercher facilement des informations sur des films, de se constituer une liste de lecture et d'échanger des recommandations avec d'autres utilisateurs.
+
+<a href="https://alabasta.me/">Voir le projet</a>
+
+Ce projet a été réalisé avec le framework Next.js, à partir duquel j'ai déployé une application web complexe au format MVC ainsi qu'une API permettant de récupérer et de trier les données provenant de plusieurs API dédiées aux films et à la base de données.
+
+Le site est déployé sur Vercel, et la base de données PostgreSQL est intégrée au service. Les échanges sont entièrement sécurisés, garantissant la confidentialité des informations des utilisateurs. La connexion au compte utilisateur est également totalement sécurisée.
+
+# Maison à Die
+* HTML
+* CSS
+* Next.js
+* Déploiement d'applications
+* Publication d'un site
+
+Ce projet personnel vise à répondre à la demande initiale concernant une maison en location sur la plateforme Airbnb, dont le livret d'accueil n'est plus à jour et est encore au format papier. L'objectif est de créer une page web dynamique et responsive, accessible aux locataires après un simple scan d'un QR code. Ainsi, les informations deviennent plus facilement accessibles, mieux organisées et mises à jour avec davantage de simplicité.
+
+<a href="https://maison-a-die.vercel.app/">Voir le projet</a>
+
+La page web à étée développée avec Framework Next.js, et déployée à partir de Vercel.
+
 # Ce portfolio
 * HTML
 * CSS

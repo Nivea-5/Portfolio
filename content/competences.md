@@ -4,6 +4,7 @@
 * C
 * C++
 * C#
+* .NET
 * Java
 * JavaFX
 * Kotlin
@@ -52,6 +53,7 @@ Enfin, lors de mon stage de fin de deuxième année, j'ai acquis des notions de 
 * PostgreSQL
 * SQLite
 * SQL server (MSSQL)
+* Oracle
 
 ![image](../img/database.svg)
 
@@ -63,7 +65,7 @@ Lors de mon stage de fin de deuxième année, j'ai eu l'opportunité de travaill
 
 Plus généralement, dans le domaine des bases de données, j'ai perfectionné mes compétences en optimisant des modèles et en élaborant des schémas relationnels bien structurés, en suivant les principes de normalisation et en explorant la modélisation multi-dimensionnelle.
 
-# Administration système et réseaux
+# Déploiement d'application, cloud, administration de systèmes et réseaux
 
 * Apache
 * Serveurs Linux
