@@ -1,7 +1,40 @@
+# Musculator
+* Projet personnel
+* Next.js
+* typescript
+* tailwindcss
+* Déploiement d'application
+
+Le but de ce projet est de créer un site web permettant de naviguer parmi une large banque d'exercices de musculation, d'en sélectionner, d'en ajouter ou encore de créer des séances d'entrainement.
+
+![image](../img/musculator-screen-accueil.png)
+
+Page d'accueil du site
+
+![image](../img/musculator-screen-recherche.png)
+
+Recherche d'exercices
+
+![image](../img/musculator-screen-exercice.png)
+
+Page montrant les details d'un exercice
+
+![image](../img/musculator-screen-creation.png)
+
+Page de création d'un exercice
+
+![image](../img/musculator-screen-seances.png)
+
+Liste des séances créées par l'utilisateur
+
+Le site dispose d'une banque de près de 500 exercices différents. Lorsque l'utilisateur souhaite créer une séance, les exercices les plus pertinents lui sont proposés selon les groupes musculaires sélectionnés.
+
+L'interface utilisateur a été pensée pour l'affichage sur mobile, et le site web est installable sous forme d'application native grâce à la technologie PWA (progressive web app).
+
 # Alabasta
+* Projet personnel
 * Next.js
 * Déploiement d'application
-* Streaming vidéo
 * Création et gestion d'une base de données
 * PostgreSQL
 * Sécurisation des échanges avec le serveur
@@ -9,7 +42,13 @@
 
 Ce projet personnel a pour objectif de créer un site web dynamique permettant de rechercher facilement des informations sur des films, de se constituer une liste de lecture et d'échanger des recommandations avec d'autres utilisateurs.
 
-<a href="https://alabasta.me/">Voir le projet</a> Le code de connexion pour la démo est 269462
+![image](../img/alabasta-screen-accueil.png)
+
+![image](../img/alabasta-screen-film.png)
+
+![image](../img/alabasta-screen-ma-liste.png)
+
+![image](../img/alabasta-screen-recherche.png)
 
 Ce projet a été réalisé avec le framework Next.js, à partir duquel j'ai déployé une application web complexe au format MVC ainsi qu'une API permettant de récupérer et de trier les données provenant de plusieurs API dédiées aux films et à la base de données.
 

@@ -1,14 +1,31 @@
+# Experience à l'international
+* Autonomie
+* Adaptabilité
+* Canada
+* Quebec
+* Double diplomation
+
+Pour ma dernière (troisième) année de BUT informatique à l'IUT2 de Grenoble, j'ai eu l'opportunité de la réaliser à l'international, à l'Université du Quebec à Chicoutimi, au Canada.
+
+![image](../img/uqac.JPG)
+
+Grâce à un accord, cette année d'études s'effectue en double diplomation, me permettant d'obtenir à la fois le diplôme du BUT informatique (France) ainsi qu'un Baccalauréat en informatique (Canada).
+
+<a href="https://www.uqac.ca/programme/7833-baccalaureat-en-informatique/">Voir la fiche de présentation du diplôme</a>
+
+Cette expérience m'a permis de développer mon autonomie et mon adaptabilité, car il a fallu s'adapter à un nouvel environnement, une nouvelle culture, un nouveau système éducatif et un nouveau mode de vie.
+
 # Stage de fin d’année de BUT2
 
 * C#
 * .NET
 * Cypress
 * Angular
-* Sérialisation et désérialisation de données hexadécimal
+* Sérialisation et désérialisation de données hexadécimale
 * Tests
 * Tests unitaires
 * Tests d'intégration
-* Tests fonctonnels
+* Tests fonctionnels
 * Travail en équipe
 * Experience professionelle
 

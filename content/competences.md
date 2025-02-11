@@ -8,6 +8,7 @@
 * Java
 * JavaFX
 * Kotlin
+* Flutter
 * Applications mobiles
 * MVC
 * Design Pattern
@@ -27,11 +28,14 @@ En octobre 2023, lors d'une game jam, j'ai eu l'opportunité de collaborer en é
 
 * HTML
 * CSS
+* TailWindCSS
 * JavaScript
+* TypeScript
 * JQuery
 * PHP
 * Node.js
 * React.js
+* Next.js
 * Angular
 * Symfony
 * Bootstrap
@@ -54,6 +58,8 @@ Enfin, lors de mon stage de fin de deuxième année, j'ai acquis des notions de 
 * SQLite
 * SQL server (MSSQL)
 * Oracle
+* MySQL
+* MangoDB
 
 ![image](../img/database.svg)
 
