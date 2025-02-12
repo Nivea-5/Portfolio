@@ -1,0 +1,53 @@
+
+
+/*animation du nom de la page actuelle */
+#menu:checked ~ #wrap .nom-page h1 {
+    color: lightcoral;
+}
+#menu:checked ~ #wrap .nom-page h1:first-child {
+    position: absolute;
+    font-size: 50px;
+    transform: translate(-325px, -400px);
+}
+#menu:checked ~ #wrap .nom-page h1:nth-child(2) {
+    transition-delay: .02s;
+    position: absolute;
+    font-size: 50px;
+    transform: translate(-280px, -400px);
+}
+#menu:checked ~ #wrap .nom-page h1:nth-child(3) {
+    transition-delay: .04s;
+    position: absolute;
+    font-size: 50px;
+    transform: translate(-235px, -400px);
+}
+#menu:checked ~ #wrap .nom-page h1:nth-child(4) {
+    transition-delay: .06s;
+    position: absolute;
+    font-size: 50px;
+    transform: translate(-190px, -400px);
+}
+#menu:checked ~ #wrap .nom-page h1:nth-child(5) {
+    transition-delay: .08s;
+    position: absolute;
+    font-size: 50px;
+    transform: translate(-145px, -400px);
+}
+#menu:checked ~ #wrap .nom-page h1:nth-child(6) {
+    transition-delay: .1s;
+    position: absolute;
+    font-size: 50px;
+    transform: translate(-100px, -400px);
+}
+#menu:checked ~ #wrap .nom-page h1:last-child {
+    transition-delay: .12s;
+    position: absolute;
+    font-size: 50px;
+    transform: translate(-80px, -400px);
+}
+
+.title h1 {
+    margin-top: 0;
+}
+/*pour faire parallax : https://www.ibrahima-ndaw.com/fr/blog/parallax-effect-with-10-lines-of-javascript/ */
+/*pour des formes : https://www.freepik.com/free-vector/gradient-fluid-frame-set_15740874.htm#query=minimalist%20fluid&position=40&from_view=search&track=ais */

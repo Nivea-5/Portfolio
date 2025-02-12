@@ -1,0 +1,129 @@
+
+body {
+    background: linear-gradient(to right, #000000, #434343);
+    scroll-behavior: smooth;
+    margin: 0;
+    font-family: 'Krona One', sans-serif;
+    background-size: cover;
+    color: white;
+}
+
+/*contenu principal, avec bar de navigation et main */
+
+#wrap {
+    width: 360px;
+    position: sticky;
+    top: 0;
+
+}
+nav {
+    backdrop-filter: blur(20px);
+    transform: translate(-300px);
+    display: flex;
+    align-items: center;
+    width: 360px;
+    justify-content: left;
+    position: absolute;
+    height: 100vh;
+    transition: all 0.5s ease;
+}
+
+/*logo du menu hamburger*/
+.hamburger {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+
+}
+/*elements du logo hamburger*/
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 35px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 7px;
+    transition: all 0.5s;
+}
+
+.nom-page {
+    position: absolute;
+    right: 20px;
+    transition: all .5s;
+}
+.nom-page h1 {
+    transition: all.5s ease;
+}
+
+
+
+/*elements du logo hamburger lorsqu'ils s'animent*/
+#menu:checked ~ #wrap .hamburger span:nth-child(2) {
+    display: none;
+}
+#menu:checked ~ #wrap .hamburger span:first-child {
+    transform: translate(0px, 6px) rotate(45deg) ;
+    background-color: lightcoral;
+}
+#menu:checked ~ #wrap .hamburger span:last-child {
+    transform: translate(0px, -5px) rotate(-45deg) ;
+    background-color: lightcoral;
+}
+
+/*elements de la bare de navigation*/
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+nav ul li {
+    transition: all 0.2s;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 30px;
+    font-variant: small-caps;
+
+    transition: all 0.2s;
+}
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    border-radius: 2px;
+    background-color: #f08080;
+    transition: all 0.2s ease;
+}
+nav ul li a:hover {
+    letter-spacing: 2px;
+    color:lightcoral;
+}
+nav ul li:hover {
+    transform: translate(10px, 0px);
+}
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+
+#menu {
+    display: none;
+}
+
+#menu:checked ~ #wrap nav {
+    transform: translate(0, 0);
+}
+
+
+
+
+
+footer {
+    width: 100%;
+
+}
