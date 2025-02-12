@@ -1,0 +1,198 @@
+main {
+  display: flex;
+  gap: 50px;
+  animation-duration: 1s;
+  animation-name: reveal;
+}
+@keyframes  reveal{ /*animation lors du chargement le la page*/
+  from {
+    padding-top: 10px;
+    opacity: 0%;
+  } 
+}
+html {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: url(./img/degrade.jpg);
+  background-position: center;
+  background-size: cover;
+}
+body {
+  border-radius: 50px;
+  padding: 50px;
+  padding-top: 15px;
+}
+/* Barre de Navigation -------------------------*/
+
+header ul { /*le conteneur des boutons (liens)*/
+  padding-left: 0px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+header ul:hover { /*animation de ce conteneur au passage de la souris*/
+  padding-top: 10px;
+  margin-bottom: -4px;
+  padding-bottom: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+header li {   /*les boutons de la barre de nav*/
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+header li:hover {   /*animation souris des boutons de la barre de nav*/
+  transform: scale(1.2);
+}
+header a {  /*contenu des boutons*/
+  text-decoration: none;
+  list-style: none;
+  padding: 10px;
+  border-radius: 20px;
+  color: black;
+  transition: all 0.2s ease;
+}
+header a:hover {  /*animation souris du contenu des boutons*/
+  background-color:rgb(85, 85, 85);
+}
+
+
+/* Contenue permanent à gauche --------------------------*/
+
+aside{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+aside figure img {
+  border-radius: 30px;
+}
+aside h2 {  /*nom et prenom */
+  padding: 20px;
+  border-radius: 30px;
+}
+aside ul {  /*autres infos en dessous*/
+  padding: 20px;
+  border-radius: 30px;
+  list-style: none;
+}
+@media all and (max-width: 1000px){  /*quand on passe en dessous de 800px...*/
+  aside figure {  /*centrer l'image*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+  aside h2{   /*centrer le texte*/
+    text-align: center;
+  }
+  main {     /*ordre d'affichage des elements*/
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+/* contenu à droite ---------------------------- */
+
+p {
+  text-align: justify;
+}
+article {
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 30px;
+  margin-top: 15px;
+}
+
+/* Pied de page ------------------------------ */
+
+footer ul { /*conteneur du pied de page*/
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+
+  padding: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-bottom: -50px;
+
+  transition: all 0.2s ease;
+}
+footer ul:hover { /*animation conteneur du pied de page*/
+  margin-left: -50px;
+  margin-right: -50px;
+  border-bottom-left-radius:  50px;
+  border-bottom-right-radius: 50px;
+}
+footer li { /*elements du conteneur pied de page*/
+  list-style: none;
+  background-color: black;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+
+  transition: all 0.2s ease;
+}
+footer a {  /*contenu des elements du conteneur*/
+  text-decoration: none;
+  color: white;
+}
+footer li:hover { /*animation des elements*/
+  transform: scale(1.10);
+}
+footer li:visited{  /*couleur apres visite des liens*/
+  background-color: crimson;
+}
+
+/* Miniatures (seulement visibles sur lal page projets) -------------*/
+main aside:last-child div { /*les div contenant les miniatures*/
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  position: relative;
+}
+@media all and (max-width: 1000px) {  /*affichage si la largeur d'ecran occupe moins d'une certaine largeur*/
+  main aside:last-child {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+      position: relative;
+  }
+}
+main aside:last-child div img { /*les images*/
+  width: 200px;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+  }
+main aside:last-child div p { /*les textes*/
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 10px;
+
+  bottom: 0px;
+  left: 3px;
+  right: 3px;
+  
+
+  position: absolute;
+  transition: all 0.2s ease;
+}
+main aside:last-child div:hover img { /*animation de l'image quand la souris passe dessus*/
+  filter: blur(5px);
+}
+aside div:hover p {   /*animation du texte quand la souris passe sur l'image*/
+  transform:scale(1.2) translate(0px, -30px);
+}
