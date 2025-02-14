@@ -11,6 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        light: "var(--light)",
+        lightHover: "var(--light-hover)",
+        blue: "var(--blue)",
+        blueHover: "var(--blue-hover)",
+        dark: "var(--dark)",
+        darkHover: "var(--dark-hover)",
       },
     },
   },
