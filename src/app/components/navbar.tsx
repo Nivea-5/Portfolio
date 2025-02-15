@@ -83,31 +83,31 @@ export default function Navbar() {
     return (
         <nav className={"fixed top-4  w-full flex justify-center items-center z-50"}>
             <ul className={"w-fit bg-foreground border-2 border-background rounded-[100px] flex justify-center items-center gap-1 p-1"}>
-                <li onClick={() => router.push("/")} className={`${isActive("/") ? "bg-white hover:bg-light text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 text-[0px] pl-4 pr-4 cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
+                <li onClick={() => router.push("/")} className={`${isActive("/") ? "bg-white hover:bg-white text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 text-[0px] pl-4 pr-4 cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
                     <img src={"/ico/home-solid.svg"} alt={"home"} className={`${!isActive("/") && "invert"} w-4`}/>
                     Accueil
                 </li>
-                <li onClick={() => router.push("/a-propos")} className={`${isActive("/a-propos") ? "bg-white hover:bg-light text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
+                <li onClick={() => router.push("/a-propos")} className={`${isActive("/a-propos") ? "bg-white hover:bg-white text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
                     <img src={"/ico/user-solid.svg"} alt={"user"} className={`${!isActive("/a-propos") && "invert"} w-4`}/>
                     A propos
                 </li>
-                <li onClick={() => router.push("/competences")} className={`${isActive("/competences") ? "bg-white hover:bg-light text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
+                <li onClick={() => router.push("/competences")} className={`${isActive("/competences") ? "bg-white hover:bg-white text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
                     <img src={"/ico/command-line-solid.svg"} alt={"command"} className={`${!isActive("/competences") && "invert"} w-4`}/>
                     Compétences
                 </li>
-                <li onClick={() => router.push("/projets")} className={`${isActive("/projets") ? "bg-white hover:bg-light text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
+                <li onClick={() => router.push("/projets")} className={`${isActive("/projets") ? "bg-white hover:bg-white text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
                     <img src={"/ico/document-solid.svg"} alt={"document"} className={`${!isActive("/projets") && "invert"} w-4`}/>
                     Projets
                 </li>
-                <li onClick={() => router.push("/experiences")} className={`${isActive("/experiences") ? "bg-white hover:bg-light text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
+                <li onClick={() => router.push("/experiences")} className={`${isActive("/experiences") ? "bg-white hover:bg-white text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
                     <img src={"/ico/briefcase-solid.svg"} alt={"briefcase"} className={`${!isActive("/experiences") && "invert"} w-4`}/>
                     Experience
                 </li>
-                <li onClick={() => router.push("/rechercher")} className={`${isActive("/rechercher") ? "bg-white hover:bg-light text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
+                <li onClick={() => router.push("/rechercher")} className={`${isActive("/rechercher") ? "bg-white hover:bg-white text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
                     <img src={"/ico/search-outline.svg"} alt={"search"} className={`${!isActive("/rechercher") && "invert"} w-4`}/>
                     Rechercher
                 </li>
-                <li onClick={() => router.push("/contact")} className={`${isActive("/contact") ? "bg-white hover:bg-light text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
+                <li onClick={() => router.push("/contact")} className={`${isActive("/contact") ? "bg-white hover:bg-white text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
                     <img src={"/ico/chat-solid.svg"} alt={"chat"} className={`${!isActive("/contact") && "invert"} w-4`}/>
                     Contact
                 </li>
