@@ -12,6 +12,7 @@
   --dark-hover: #31343a;
   --dark: #090e17;
   --foreground: #060902;
+  --foreground-transparent: rgba(6, 9, 2, 0.73);
 }
 
 * {

@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        foregroundTransparent: "var(--foreground-transparent)",
         light: "var(--light)",
         lightHover: "var(--light-hover)",
         blue: "var(--blue)",

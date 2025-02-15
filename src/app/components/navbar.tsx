@@ -1,50 +1,37 @@
 "use client"
 
 import {usePathname, useRouter} from "next/navigation";
-import {useEffect, useState} from "react";
+import { useState} from "react";
+import {AnimatePresence, motion} from "framer-motion";
 
 export default function Navbar() {
 
     const pathname = usePathname();
     const router = useRouter();
     const isActive = (path: string) => pathname === path;
-    const [isMobile, setIsMobile] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    useEffect(() => {
-        // Fonction pour vérifier la largeur de l'écran
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 1024); // Détecte si c'est mobile (moins de 768px)
-        };
-        // Vérifie la largeur initiale
-        handleResize();
-
-        // Écoute les changements de taille d'écran
-        window.addEventListener("resize", handleResize);
-
-        // Nettoie l'écouteur pour éviter les fuites de mémoire
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
 
     function navigate(path: string) {
         router.push(path);
         setIsMenuOpen(false);
     }
 
-    if (isMobile) {
+    if (window.innerWidth < 1024) {
         return (
-            <nav className={"fixed top-2 right-2 z-50"}>
-                <div onClick={() => setIsMenuOpen(true)} className={"h-14 w-14 bg-background flex justify-center items-center p-2 rounded-[100px]"}>
-                    <img src={"/ico/bars-outline.svg"} alt={"bars"} className={""}/>
+            <nav className={"fixed top-0 right-0 z-40"}>
+                <div onClick={() => setIsMenuOpen(!isMenuOpen)} className={"h-14 w-14 bg-background flex justify-center items-center p-2 rounded-[100px] z-50 fixed top-2 right-2"}>
+                    <img src={ isMenuOpen ? "/ico/close-outline.svg" : "/ico/bars-outline.svg"} alt={"bars"} className={""}/>
                 </div>
+                <AnimatePresence>
                 {
                     isMenuOpen &&
-                    <div
-                        className={"fixed top-0 left-0 w-full h-[100vh] bg-foreground flex gap-6 flex-col justify-center items-center p-14"}>
-                        <div onClick={() => setIsMenuOpen(false)}
-                             className={"absolute top-2 right-2 h-14 w-14 bg-background flex justify-center items-center p-2 rounded-[100px]"}>
-                            <img src={"/ico/close-outline.svg"} alt={"bars"} className={""}/>
-                        </div>
+                    <motion.div
+                        key="mobile-menu"
+                        initial={{transform: "scale(0)", transformOrigin: "top right", borderRadius: "100px" }}
+                        animate={{transform: "scale(1)", transformOrigin: "top right", borderRadius: "0"  }}
+                        exit={{transform: "scale(0)", transformOrigin: "top right", borderRadius: "100px"  }}
+                        className={"fixed top-0 left-0 w-full h-[100vh] backdrop-blur bg-foregroundTransparent flex gap-6 flex-col justify-center items-center p-14 z-40"}>
+
                         <button onClick={() => navigate("/")} className={"w-full p-4 gap-3"}>
                         Accueil
                             <img src={"/ico/home-solid.svg"} alt={"home"} className={"static"}/>
@@ -73,9 +60,10 @@ export default function Navbar() {
                             Contact
                             <img src={"/ico/chat-solid.svg"} alt={"chat"} className={"static"}/>
                         </button>
-                    </div>
+                    </motion.div>
 
                 }
+                </AnimatePresence>
             </nav>
         )
     }
