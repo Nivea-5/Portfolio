@@ -41,7 +41,7 @@ export default function Home() {
                     }}
                     className={"text-background absolute bottom-10 w-full md:p-0 p-10 text-center left-0 z-10 text-xl"}
                 >
-                    Développeur fullstack et d'applications
+                    Développeur fullstack et d&apos;applications
                 </motion.p>
             </div>
             <div
@@ -55,9 +55,9 @@ export default function Home() {
                     <img src={"/img/aircraft.svg"} alt={"aircraft!"} className={"md:w-1/4 w-full"}/>
 
                     <h1 className={"md:w-2/3 text-center"}>Briser les cadres, ouvrir les possibles.</h1>
-                    <p className={"w-2/3 text-center"}>Au cours de mon parcours, j'ai appris à penser au-delà des cadres
-                        et des limites établies, convaincu que l'innovation véritable naît de la capacité à explorer
-                        l'inconnu et à imaginer de nouvelles perspectives.</p>
+                    <p className={"w-2/3 text-center"}>Au cours de mon parcours, j&apos;ai appris à penser au-delà des cadres
+                        et des limites établies, convaincu que l&apos;innovation véritable naît de la capacité à explorer
+                        l&apos;inconnu et à imaginer de nouvelles perspectives.</p>
                 </motion.div>
 
                 <motion.div
@@ -70,8 +70,8 @@ export default function Home() {
                     <h1 className={"md:w-2/3 text-center"}>Optimisation au pixel près, innovation à chaque étape.</h1>
                     <p className={"w-2/3 text-center"}>Au fil de mon expérience en développement et en gestion de
                         projets,
-                        j'ai acquis la certitude que chaque détail, aussi infime soit-il, joue un
-                        rôle essentiel dans la création d'un résultat répondant aux attentes de toutes les parties
+                        j&apos;ai acquis la certitude que chaque détail, aussi infime soit-il, joue un
+                        rôle essentiel dans la création d&apos;un résultat répondant aux attentes de toutes les parties
                         prenantes.</p>
                 </motion.div>
 
@@ -82,7 +82,7 @@ export default function Home() {
                     <img src={"/img/team.svg"} alt={"team!"} className={"md:w-1/4 w-full"}/>
 
                     <h1 className={"md:w-2/3 text-center"}>Le succès se construit toujours à plusieurs.</h1>
-                    <p className={"w-2/3 text-center"}>Tout au long de mon parcours, j'ai découvert que les meilleures
+                    <p className={"w-2/3 text-center"}>Tout au long de mon parcours, j&apos;ai découvert que les meilleures
                         réussites naissent de la collaboration, où chaque talent contribue à créer des solutions plus
                         fortes, plus innovantes et plus durables.</p>
                 </motion.div>
@@ -96,7 +96,7 @@ export default function Home() {
                     <button
                         onClick={() => router.push("/a-propos")}
                     >
-                        C'est parti
+                        C&apos;est parti
                         <img alt={"rocket"} src={"/ico/rocket-solid.svg"}/>
                     </button>
                 </motion.div>

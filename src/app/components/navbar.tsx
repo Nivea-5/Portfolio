@@ -1,7 +1,7 @@
 "use client"
 
 import {usePathname, useRouter} from "next/navigation";
-import { useState} from "react";
+import {useEffect, useState} from "react";
 import {AnimatePresence, motion} from "framer-motion";
 
 export default function Navbar() {
@@ -10,13 +10,31 @@ export default function Navbar() {
     const router = useRouter();
     const isActive = (path: string) => pathname === path;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     function navigate(path: string) {
         router.push(path);
         setIsMenuOpen(false);
     }
 
-    if (window.innerWidth < 1024) {
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 1024);
+        };
+
+        // Détecter la taille au premier chargement
+        handleResize();
+
+        // Ajouter un écouteur pour les changements de taille
+        window.addEventListener("resize", handleResize);
+
+        // Nettoyer l'écouteur
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    if (isMobile) {
         return (
             <nav className={"fixed top-0 right-0 z-40"}>
                 <div onClick={() => setIsMenuOpen(!isMenuOpen)} className={"h-14 w-14 bg-background flex justify-center items-center p-2 rounded-[100px] z-50 fixed top-2 right-2"}>
