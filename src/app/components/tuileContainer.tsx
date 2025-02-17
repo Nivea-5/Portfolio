@@ -1,18 +1,23 @@
 "use client"
 
 import {SectionComplete} from "@/app/controller/sectionController";
-import ParagrapheClassique from "@/app/components/paragrapheClassique";
 import {motion} from "framer-motion";
 import {useRouter} from "next/navigation";
+import Tuile from "@/app/components/tuile";
+import {useEffect} from "react";
 
-export default function ParagraphClassiqueContainer({sections}: {sections: SectionComplete[]}) {
+export default function TuileContainer({sections}: {sections: SectionComplete[]}) {
     const router = useRouter();
+
+    useEffect(() => {
+        console.log(sections);
+    }, []);
     return (
-        <div key={sections[0]?.id || 0} className={"bg-foreground text-background p-10 pt-32 flex flex-col justify-center items-center gap-32"}>
+        <div key={sections[0]?.id || 0} className={"bg-foreground text-background p-10 pt-32 flex flex-wrap justify-center items-center gap-4"}>
             {
                 sections?.map((section) => {
                     return (
-                        <ParagrapheClassique section={section} key={section.id}/>
+                        <Tuile section={section} key={section.id}/>
                     )
                 })
             }

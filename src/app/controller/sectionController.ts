@@ -13,6 +13,7 @@ export interface SectionComplete {
     position: number;
     type: PossibleSectionType;
     elements: ElemComplete[];
+    tags: string[];
 }
 
 export async function getSectionsCompleteForPage(id: number): Promise<SectionComplete[]> {
@@ -20,12 +21,14 @@ export async function getSectionsCompleteForPage(id: number): Promise<SectionCom
     const compSect: SectionComplete[] = [];
     for (const sect of res) {
         const elements = await getElemCompleteForSection(sect.id);
+        const tags = await sql`SELECT tag.name FROM tag, section_tag as stag WHERE stag.tag_id = tag.id AND stag.section_id = ${sect.id}`;
         compSect.push({
             id: sect.id,
             title: sect.title,
             position: sect.position,
             type: sect.name as PossibleSectionType,
             elements: elements as ElemComplete[],
+            tags: tags.map((tag) => tag.name),
         });
     }
     return compSect;

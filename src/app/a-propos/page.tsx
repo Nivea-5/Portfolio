@@ -3,8 +3,8 @@
 import {useEffect, useState} from "react";
 import {getPageCompleteFromName, PageComplete} from "@/app/controller/pageController";
 import {motion} from "framer-motion";
-import ParagraphClassiqueContainer from "@/app/components/paragrapheClassiqueContainer";
 import LoadingSection from "@/app/components/loadingSection";
+import OrganizedSections from "@/app/components/organizedSections";
 
 export default function APropos() {
     const [loading, setLoading] = useState(true);
@@ -34,7 +34,7 @@ export default function APropos() {
 
             {
                 loading ? <LoadingSection/> :
-                    <ParagraphClassiqueContainer sections={page?.sections || []}/>
+                    <OrganizedSections sections={page?.sections || []}/>
             }
 
         </main>

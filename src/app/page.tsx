@@ -5,7 +5,7 @@ import {useRouter} from "next/navigation";
 import {useEffect, useState} from "react";
 import {getPageCompleteFromName, PageComplete} from "@/app/controller/pageController";
 import LoadingSection from "@/app/components/loadingSection";
-import ParagraphClassiqueContainer from "@/app/components/paragrapheClassiqueContainer";
+import OrganizedSections from "@/app/components/organizedSections";
 
 export default function Home() {
     const router = useRouter();
@@ -63,7 +63,7 @@ export default function Home() {
 
             {
                 loading ? <LoadingSection/> :
-                    <ParagraphClassiqueContainer sections={page?.sections || []}/>
+                    <OrganizedSections sections={page?.sections || []}/>
             }
 
             <motion.div

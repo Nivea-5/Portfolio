@@ -1,18 +1,18 @@
 "use client"
 
 import {SectionComplete} from "@/app/controller/sectionController";
-import ParagrapheClassique from "@/app/components/paragrapheClassique";
 import {motion} from "framer-motion";
 import {useRouter} from "next/navigation";
+import ParagrapheDev from "@/app/components/paragrapheDev";
 
-export default function ParagraphClassiqueContainer({sections}: {sections: SectionComplete[]}) {
+export default function ParagraphDevContainer({sections}: {sections: SectionComplete[]}) {
     const router = useRouter();
     return (
-        <div key={sections[0]?.id || 0} className={"bg-foreground text-background p-10 pt-32 flex flex-col justify-center items-center gap-32"}>
+        <div key={sections[0]?.id || 0} className={"bg-foreground text-background p-10 pt-32 flex flex-col justify-center items-center gap-6"}>
             {
                 sections?.map((section) => {
                     return (
-                        <ParagrapheClassique section={section} key={section.id}/>
+                        <ParagrapheDev section={section} key={section.id}/>
                     )
                 })
             }

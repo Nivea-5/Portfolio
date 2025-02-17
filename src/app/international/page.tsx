@@ -6,12 +6,12 @@ import {motion} from "framer-motion";
 import LoadingSection from "@/app/components/loadingSection";
 import OrganizedSections from "@/app/components/organizedSections";
 
-export default function Experience() {
+export default function International() {
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState<PageComplete | null>(null);
 
     useEffect(() => {
-        getPageCompleteFromName("experience").then((page) => {
+        getPageCompleteFromName("international").then((page) => {
             setPage(page);
         }).catch((error) => {
             console.log(error);
@@ -28,8 +28,8 @@ export default function Experience() {
                 whileInView={{opacity: 1, transform: "scale(1)"}}
                 className={"flex flex-col  justify-center items-center gap-3"}
             >
-                <h1>Mes compétences</h1>
-                <p>Mes experiences passées en entreprise.</p>
+                <h1>Mon expérience à l&apos;international</h1>
+                <p>Mon expérience au Québec (Canada) dans le cadre de ma troisième année de BUT informatique.</p>
             </motion.div>
 
             {
