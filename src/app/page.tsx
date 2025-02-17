@@ -5,7 +5,6 @@ import {useRouter} from "next/navigation";
 import {useEffect, useState} from "react";
 import {getPageCompleteFromName, PageComplete} from "@/app/controller/pageController";
 import LoadingSection from "@/app/components/loadingSection";
-import ParagrapheClassique from "@/app/components/paragrapheClassique";
 import ParagraphClassiqueContainer from "@/app/components/paragrapheClassiqueContainer";
 
 export default function Home() {

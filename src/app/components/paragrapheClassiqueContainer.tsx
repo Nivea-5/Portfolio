@@ -2,7 +2,6 @@
 
 import {SectionComplete} from "@/app/controller/sectionController";
 import ParagrapheClassique from "@/app/components/paragrapheClassique";
-import {PossibleElemType} from "@/app/controller/enums";
 import {motion} from "framer-motion";
 import {useRouter} from "next/navigation";
 

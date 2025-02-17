@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import {getPageCompleteFromName, PageComplete} from "@/app/controller/pageController";
 import {motion} from "framer-motion";
 import ParagraphClassiqueContainer from "@/app/components/paragrapheClassiqueContainer";
+import LoadingSection from "@/app/components/loadingSection";
 
 export default function APropos() {
     const [loading, setLoading] = useState(true);
@@ -30,7 +31,10 @@ export default function APropos() {
                 <p>Apprenez-en plus sur moi-même, mes passions et mon parcours scolaire et universitaire.</p>
             </motion.div>
 
-            <ParagraphClassiqueContainer sections={page?.sections || []}/>
+            {
+                loading ? <LoadingSection/> :
+                    <ParagraphClassiqueContainer sections={page?.sections || []}/>
+            }
 
         </main>
     )
