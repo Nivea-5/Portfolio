@@ -38,7 +38,7 @@ export default function OrganizedSections({sections}: {sections: SectionComplete
             <motion.div
                 initial={{opacity: 0, transform: "scale(.8)"}}
                 whileInView={{opacity: 1, transform: "scale(1)"}}
-                className={"flex flex-col  justify-center items-center gap-10"}
+                className={"flex flex-col  justify-center items-center gap-10 mt-24"}
             >
                 <img src={"/img/desert.svg"} alt={"image"}
                      className={"md:w-1/4 w-full"}/>
