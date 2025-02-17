@@ -26,7 +26,7 @@ export default function ParagraphClassiqueContainer({sections}: {sections: Secti
                     <img src={"/img/desert.svg"} alt={"image"}
                          className={"md:w-1/4 w-full"}/>
                     <h1 className={"md:w-2/3 text-center"}>Hum, ça semble bien tranquille ici...</h1>
-                    <p className={"w-2/3 text-center"}>Aucun contenu n'est disponible pour le moment. Merci de réessayer
+                    <p className={"w-2/3 text-center"}>Aucun contenu n&apos;est disponible pour le moment. Merci de réessayer
                         plus tard.</p>
                     <button
                         onClick={() => router.push("/contact")}
