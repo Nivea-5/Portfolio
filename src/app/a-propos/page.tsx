@@ -14,7 +14,7 @@ export default function APropos() {
         getPageCompleteFromName("à propos").then((page) => {
             setPage(page);
         }).catch((error) => {
-            console.error(error);
+            console.log(error);
         }).finally(() => {
             setLoading(false);
         });
