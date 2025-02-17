@@ -120,7 +120,7 @@ export default function Navbar() {
                     Compétences
                 </li>
                 <li onClick={() => router.push("/international")}
-                    className={`${isActive("/competences") ? "bg-white hover:bg-white text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
+                    className={`${isActive("/international") ? "bg-white hover:bg-white text-foreground text-[14px] gap-2" : "bg-foreground hover:bg-darkHover"} hover:text-[14px] hover:gap-2 pl-4 pr-4 text-[0px] cursor-pointer h-8 w-fit flex justify-center items-center rounded-3xl bg-foreground`}>
                     <img src={"/ico/world-solid.svg"} alt={"world"}
                          className={`${!isActive("/international") && "invert"} w-4`}/>
                     International
