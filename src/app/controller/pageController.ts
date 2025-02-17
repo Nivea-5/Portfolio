@@ -14,7 +14,11 @@ export interface PageComplete {
 export async function getPageCompleteFromName(name: string): Promise<PageComplete> {
     const res = await sql`SELECT page.id, page.title FROM page WHERE page.title = ${name}`;
     if (res.length === 0) {
-        throw `Une erreur est survenue lors de la récupération des données de la page ${name}.`;
+        return {
+            id: 0,
+            title: name,
+            sections: [],
+        };
     }
     const sections = await getSectionsCompleteForPage(res[0].id);
     return {

@@ -45,9 +45,9 @@ export default function Navbar() {
                     isMenuOpen &&
                     <motion.div
                         key="mobile-menu"
-                        initial={{transform: "scale(0)", transformOrigin: "top right", borderRadius: "100px" }}
-                        animate={{transform: "scale(1)", transformOrigin: "top right", borderRadius: "0"  }}
-                        exit={{transform: "scale(0)", transformOrigin: "top right", borderRadius: "100px"  }}
+                        initial={{transform: "scale(0)", transformOrigin: "top right"}}
+                        animate={{transform: "scale(1)", transformOrigin: "top right"}}
+                        exit={{transform: "scale(0)", transformOrigin: "top right"}}
                         className={"fixed top-0 left-0 w-full h-[100vh] backdrop-blur bg-foregroundTransparent flex gap-6 flex-col justify-center items-center p-14 z-40"}>
 
                         <button onClick={() => navigate("/")} className={"w-full p-4 gap-3"}>
