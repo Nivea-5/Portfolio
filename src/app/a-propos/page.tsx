@@ -22,6 +22,7 @@ export default function APropos() {
 
     return (
         <main>
+
             <motion.div
                 initial={{opacity: 0, transform: "scale(.8)"}}
                 whileInView={{opacity: 1, transform: "scale(1)"}}
