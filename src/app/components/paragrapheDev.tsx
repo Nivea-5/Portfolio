@@ -49,7 +49,7 @@ export default function ParagrapheDev({section}: { section: SectionComplete }) {
                                     switch (element.type) {
                                         case PossibleElemType.image:
                                             return <img key={element.id} src={element.content} alt={"image"}
-                                                        className={"md:w-1/2 w-full"}/>
+                                                        className={"md:w-1/2 w-full rounded-sm"}/>
                                         case PossibleElemType.titre:
                                             return <h3 className={"w-full"} key={element.id}>{element.content}</h3>
                                         case PossibleElemType.texte:

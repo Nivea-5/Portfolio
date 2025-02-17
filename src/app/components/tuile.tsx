@@ -48,7 +48,7 @@ export default function Tuile({section}: { section: SectionComplete }) {
                                     switch (element.type) {
                                         case PossibleElemType.image:
                                             return <img key={element.id} src={element.content} alt={"image"}
-                                                        className={"md:w-3/4 w-full"}/>
+                                                        className={"md:w-3/4 w-full rounded-sm"}/>
                                         case PossibleElemType.titre:
                                             return <h1 className={"text-center"} key={element.id}>{element.content}</h1>
                                         case PossibleElemType.texte:
@@ -92,7 +92,7 @@ export default function Tuile({section}: { section: SectionComplete }) {
                         switch (element.type) {
                             case PossibleElemType.image:
                                 return <img key={element.id} src={element.content} alt={"image"}
-                                            className={"md:w-3/4 w-full"}/>
+                                            className={"md:w-3/4 w-full rounded-sm"}/>
                             case PossibleElemType.titre:
                                 return <h3 className={"text-xl"} key={element.id}>{element.content}</h3>
                             case PossibleElemType.texte:
