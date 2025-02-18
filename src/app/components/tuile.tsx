@@ -27,7 +27,7 @@ export default function Tuile({section}: { section: SectionComplete }) {
                             animate={{transform: "scale(1)", opacity: 1}}
                             exit={{transform: "scale(0)", opacity: 0}}
                             style={{scrollbarWidth: "none"}}
-                            className={`fixed top-[10vh] h-[85vh] min-h-[85vh] max-h-[85vh] box-border z-40 w-1/3 left-1/3 flex flex-col bg-dark overflow-auto p-8 rounded-2xl gap-10 items-center`}
+                            className={`fixed md:top-[10vh] top-[15vh] md:h-[85vh] h-[80vh] min-h-[80vh] max-h-[80vh] box-border z-40 md:w-1/3 w-[96%] md:left-1/3 left-[2%] flex flex-col bg-dark overflow-auto p-8 rounded-2xl gap-10 items-center`}
                         >
                             <div onClick={() => setFullScreen(false)} className={"flex cursor-pointer hover:bg-darkHover rounded-3xl justify-center items-center w-12 h-12 fixed right-2 z-50 top-2"}>
                                 <img src={"/ico/close-outline.svg"} alt={"close"} className={"w-8 h-8 invert"}/>
@@ -71,7 +71,7 @@ export default function Tuile({section}: { section: SectionComplete }) {
                 whileInView={{opacity: 1, transform: "scale(1)"}}
                 className={`
                             flex flex-col cursor-pointer 
-                            relative items-center gap-4 bg-dark flex-1 max-w-[200px] min-w-[200px] h-[350px] p-4 rounded-2xl 
+                            relative items-center gap-4 bg-dark flex-1 max-w-[120px] min-w-[150px] h-[200px] md:max-w-[200px] md:min-w-[200px] md:h-[350px] p-4 rounded-2xl 
                             overflow-hidden md:hover:bg-darkHover
                             `}
             >

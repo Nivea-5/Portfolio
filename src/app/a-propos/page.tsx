@@ -28,8 +28,8 @@ export default function APropos() {
                 whileInView={{opacity: 1, transform: "scale(1)"}}
                 className={"flex flex-col  justify-center items-center gap-3"}
             >
-                <h1>À propos de moi</h1>
-                <p>Apprenez-en plus sur moi-même, mes passions et mon parcours scolaire et universitaire.</p>
+                <h1 className={"md:text-center w-full"}>À propos de moi</h1>
+                <p className={"md:text-center w-full"}>Apprenez-en plus sur moi-même, mes passions et mon parcours scolaire et universitaire.</p>
             </motion.div>
 
             {

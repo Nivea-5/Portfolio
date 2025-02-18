@@ -10,7 +10,7 @@ export default function TuileContainer({sections}: {sections: SectionComplete[]}
         console.log(sections);
     }, []);
     return (
-        <div key={sections[0]?.id || 0} className={"bg-foreground text-background p-10 pt-32 flex flex-wrap justify-center items-center gap-4"}>
+        <div key={sections[0]?.id || 0} className={"bg-foreground text-background p-0 pt-20 flex flex-wrap justify-center items-center gap-4"}>
             {
                 sections?.map((section) => {
                     return (

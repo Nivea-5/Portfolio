@@ -28,8 +28,8 @@ export default function Projets() {
                 whileInView={{opacity: 1, transform: "scale(1)"}}
                 className={"flex flex-col  justify-center items-center gap-3"}
             >
-                <h1>Mes projets</h1>
-                <p>Mes projets réalisés en groupe ou seul, dans le cadre de l&apos;université ou de ma propre entreprise.</p>
+                <h1 className={"md:text-center w-full"}>Mes projets</h1>
+                <p className={"md:text-center w-full"}>Mes projets réalisés en groupe ou seul, dans le cadre de l&apos;université ou de ma propre entreprise.</p>
             </motion.div>
 
             {

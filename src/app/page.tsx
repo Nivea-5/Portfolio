@@ -60,26 +60,30 @@ export default function Home() {
                     Développeur fullstack et d&apos;applications
                 </motion.p>
             </div>
+            <div className={"p-[30px]"}>
+                {
+                    loading ? <LoadingSection/> :
+                        <OrganizedSections sections={page?.sections || []}/>
+                }
 
-            {
-                loading ? <LoadingSection/> :
-                    <OrganizedSections sections={page?.sections || []}/>
-            }
+                <motion.div
+                    initial={{opacity: 0, transform: "scale(.8)"}}
+                    whileInView={{opacity: 1, transform: "scale(1)"}}
+                    className={"flex flex-col  justify-center items-center gap-10 mb-24 mt-24"}>
+                    <h1 className={"md:w-2/3 text-center"}>Apprenez-en plus !</h1>
+                    <p className={"w-2/3 text-center"}>Apprenez-en plus sur mes valeurs professionnelles, mon parcours
+                        et
+                        moi-même.</p>
+                    <button
+                        onClick={() => router.push("/a-propos")}
+                    >
+                        C&apos;est parti
+                        <img alt={"rocket"} src={"/ico/rocket-solid.svg"}/>
+                    </button>
+                </motion.div>
+            </div>
 
-            <motion.div
-                initial={{opacity: 0, transform: "scale(.8)"}}
-                whileInView={{opacity: 1, transform: "scale(1)"}}
-                className={"flex flex-col  justify-center items-center gap-10 mb-24 mt-24"}>
-                <h1 className={"md:w-2/3 text-center"}>Apprenez-en plus !</h1>
-                <p className={"w-2/3 text-center"}>Apprenez-en plus sur mes valeurs professionnelles, mon parcours et
-                    moi-même.</p>
-                <button
-                    onClick={() => router.push("/a-propos")}
-                >
-                    C&apos;est parti
-                    <img alt={"rocket"} src={"/ico/rocket-solid.svg"}/>
-                </button>
-            </motion.div>
+
         </div>
     );
 }

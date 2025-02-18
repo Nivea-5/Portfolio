@@ -28,8 +28,8 @@ export default function Competences() {
                 whileInView={{opacity: 1, transform: "scale(1)"}}
                 className={"flex flex-col  justify-center items-center gap-3"}
             >
-                <h1>Mes compétences</h1>
-                <p>Mes compétences techniques et transversales que je pourrait apporter à votre organisation.</p>
+                <h1 className={"md:text-center w-full"}>Mes compétences</h1>
+                <p className={"md:text-center w-full"}>Mes compétences techniques et transversales que je pourrait apporter à votre organisation.</p>
             </motion.div>
 
             {

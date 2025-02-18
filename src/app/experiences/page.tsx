@@ -28,8 +28,8 @@ export default function Experience() {
                 whileInView={{opacity: 1, transform: "scale(1)"}}
                 className={"flex flex-col  justify-center items-center gap-3"}
             >
-                <h1>Mes compétences</h1>
-                <p>Mes experiences passées en entreprise.</p>
+                <h1 className={"md:text-center w-full"}>Mes compétences</h1>
+                <p className={"md:text-center w-full"}>Mes experiences passées en entreprise.</p>
             </motion.div>
 
             {

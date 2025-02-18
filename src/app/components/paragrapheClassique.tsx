@@ -17,9 +17,9 @@ export default function ParagrapheClassique({section} : {section: SectionComplet
                         case PossibleElemType.image:
                             return <img key={element.id} src={element.content} alt={"image"} className={"md:w-1/4 w-full rounded-sm"}/>
                         case PossibleElemType.titre:
-                            return <h2 key={element.id} className={"md:w-2/3 text-center"}>{element.content}</h2>
+                            return <h2 key={element.id} className={"md:w-2/3 w-full md:text-center"}>{element.content}</h2>
                         case PossibleElemType.texte:
-                            return <p key={element.id} className={"w-2/3 text-center"}>{element.content}</p>
+                            return <p key={element.id} className={"md:w-2/3 w-full md:text-center"}>{element.content}</p>
                         case PossibleElemType.lien:
                             return <a key={element.id} href={element.content}>{element.content}</a>
                     }
